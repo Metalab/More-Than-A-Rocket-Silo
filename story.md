@@ -71,4 +71,28 @@ Leere Pizzaschachtel
 #### Ziel
 Mit Paul sprechen um herauszufinden dass es irgendtwo im Lab fertige Pläne für eine Rakete gibt
 
+#### Story
+Sieh geht zu der einzigen Person (außer Phantasus) die im Hauptraum sitzt um beginnt ein Gespräch:
+
+Dialog:
+```
+N: Hallo, ich bin Nuri!
+  P: Cooler Nickname.
+    N: Das ist mein echter Name!
+      P: Oh... ich dachte.. hier im Metalab sprechen sich alle per Nickname an. Das ist so ein Hackerding...
+        N: Hmm... Ich hätte eigentlich gerne einen Hackernamen... aber welchen?
+          P: Da kann ich dir nicht helfen. Was führt dich eigentlich ins Metalab?
+            N: Ich möchte einen Weltraumrakete bauen. Ich hab gehört hier im Metalab kann man alles bauen.
+              P: Lol. Da bist du nicht die erste.
+                N: Wirklich? Hat das schon jemand gemacht?
+                  P: Nicht ganz. Aber geplant. Zeljko hat sehr detailierte Pläne für eine Rakete erstellt. Irgendtwo müssen die noch rumliegen
+                    N: Die muss ich finden! Danke!
+                      P: Viel Glück, Nuri die Austronautin
+                        N: hmmm... Nuri die Austronautin... Nurinaut... Genial, ich hab meinen Hackernamen gefunden. 
+```
+
+
+
+
+
 
