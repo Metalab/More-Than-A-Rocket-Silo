@@ -19,6 +19,7 @@ Leere Pizzaschachtel
 
 #### Story ####
 Dialog:
+```
 P: Ich hab dich noch nie im Metalab gesehen. Bist du zum ersten Mal hier?
   N: Ja
     P: Uff.. eigentlich müsste ich dir jetzt eine Tour geben aber ich hab heute so viel zu tun...
@@ -31,4 +32,4 @@ P: Ich hab dich noch nie im Metalab gesehen. Bist du zum ersten Mal hier?
         P: Leider nein. Touren bekommen nur Neulinge. Außerdem hab ich heute schlechte Laune weil mein Akkordion kaputt ist.
           N: Würdest du mir eine Tour geben wenn ich dir helfe das Akkordion zu reparieren?
             P: Wenn du mich so fragst... Alles was ich brauch um das Akkordion zu reparieren ist ein spezieller Pentalobe Schraubenzieher, konnte ihn aber nicht gleich finden. Finde und bring mir den Pentalobe P2 Schraubenzieher und ich gebe dir eine Tour.
-
+```
