@@ -3,9 +3,9 @@ Nuri, kommt aus Südkorea. Ihr größter Traum ist es in den Weltraum zu reisen.
 
 ### 1. Pizza öffne dich
 #### Items Anfang
-2€
+* 2€
 #### Items Ende
-Leere Pizzaschachtel
+* Leere Pizzaschachtel
 #### Ziel
 Betrete das Metalab
 
@@ -16,8 +16,8 @@ Auf der Suche nach Leuten die ihr Zeigen können wie sie eine Rakete baut findet
 Vor ihr steht Phantasus und erwartet voller Vorfreude die Pizza welche er bestellt hat. Er fragt wie viel es kostet, worauf sie ihm erklärt dass sie keine Pizzalieferantin ist.
 
 #### Items Anfang
-2€
-Leere Pizzaschachtel
+* 2€
+* Leere Pizzaschachtel
 #### Items Ende
 
 #### Ziel 
@@ -43,13 +43,13 @@ P: Ich hab dich noch nie im Metalab gesehen. Bist du zum ersten Mal hier?
 #### 3. Der Stickertisch
 
 #### Items Anfang
-2€
-Leere Pizzaschachtel
+* 2€
+* Leere Pizzaschachtel
 
 #### Items Ende
-Kugelschreiber
-Zwiebelsticker
-Metalabanhänger
+* Kugelschreiber
+* Zwiebelsticker
+* Metalabanhänger
 
 #### Ziel
 Items finden
@@ -60,10 +60,10 @@ Sie betritt das Metalab und gleich beim Eingang zum Hauptraum steht ein kleiner 
 #### 4. Hauptraum 1
 
 #### Items Anfang
-Kugelschreiber
-Zwiebelsticker
-Metalabanhänger
-2€
+* Kugelschreiber
+* Zwiebelsticker
+* Metalabanhänger
+* 2€
 Leere Pizzaschachtel 
 
 #### Items Ende
