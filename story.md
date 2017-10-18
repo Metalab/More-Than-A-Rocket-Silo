@@ -16,7 +16,7 @@ Auf der Suche nach Leuten die ihr Zeigen können wie sie eine Rakete baut findet
 Vor ihr steht Phantasus und erwartet voller Vorfreude die Pizza welche er bestellt hat. Er fragt wie viel es kostet, worauf sie ihm erklärt dass sie keine Pizzalieferantin ist.
 
 #### Items Anfang
-Leere Pizzaschachtel
+
 #### Items Ende
 
 #### Ziel 
@@ -38,3 +38,18 @@ P: Ich hab dich noch nie im Metalab gesehen. Bist du zum ersten Mal hier?
           N: Würdest du mir eine Tour geben wenn ich dir helfe das Akkordion zu reparieren?
             P: Wenn du mich so fragst... Alles was ich brauch um das Akkordion zu reparieren ist ein spezieller Pentalobe Schraubenzieher, konnte ihn aber nicht gleich finden. Finde und bring mir den Pentalobe P2 Schraubenzieher und ich gebe dir eine Tour.
 ```
+
+#### 3. Der Stickertisch
+
+#### Items Anfang
+
+#### Items Ende
+Kugelschreiber
+Zwiebelsticker
+Metalabanhänger
+
+#### Ziel
+Items finden
+
+#### Story
+Sie betritt das Metalab und gleich beim Eingang zum Hauptraum steht ein kleiner runder Tisch. Sie durchsucht den Tisch und findet einen Kugelschreiber, ein Zwiebelsticker (in wirklichkeit ein TOR-Sticker welchen sie nimmt weil sie Zwiebeln so gern hat), und einen Metalabanhänger aus Acryl.
