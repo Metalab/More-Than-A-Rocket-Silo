@@ -6,8 +6,10 @@ Nuri, kommt aus Südkorea. Ihr größter Traum ist es in den Weltraum zu reisen.
 Keine
 #### Items Ende
 Leere Pizzaschachtel
+#### Ziel
+Betrete das Metalab
 
-#### Story ####
+#### Story
 Auf der Suche nach Leuten die ihr Zeigen können wie sie eine Rakete baut findet sie das Metalab. Sie beschliesst das Metalab zu besuchen. Schon auf der Straße kann sie durchs Fenster sehen, dass Leute anwesend sind. Sie geht zur Türe und läutet, aber nichts passiert. Egal wie oft sie es versucht die Klingel macht kein Geräusch. Also fängt sie an zu rufen: Hallo... Ich will rein... bitte macht auf... . noch immer macht ihr niemand auf. Also geht sie zum Fenster und klopft an. Leute wenden ihr kurz den Kopf zu nur um gleich wieder in den Bildschirm zu starren und sie zu ignorieren. Sieh sieht sich auf der Straße um und findet eine leere Pizzaschachtel. Sie nimmt die Schachtel mit zum Fenster, klopft an und zeigt die Schachtel her. Wie vom Blitz getroffen springt eine Person auf und rennt zur Türe.
 
 ### 2. Das Akkordion
@@ -17,7 +19,10 @@ Vor ihr steht Phantasus und erwartet voller Vorfreude die Pizza welche er bestel
 Leere Pizzaschachtel
 #### Items Ende
 
-#### Story ####
+#### Ziel 
+Gib Phantasus den Pentalob P2 Schraubenzieher damit er dir eine Tour gibt
+
+#### Story
 Dialog:
 ```
 P: Ich hab dich noch nie im Metalab gesehen. Bist du zum ersten Mal hier?
