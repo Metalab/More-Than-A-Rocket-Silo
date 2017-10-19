@@ -130,7 +130,7 @@ int main(int argc, char** argv) {
     ++lineNum;
 
     boost::trim(line);
-    if(line.empty()) {
+    if(line.empty() || boost::starts_with(line, "## ")) {
       continue;
     } else if (line.at(0) == '-') {
       expected.reset();
