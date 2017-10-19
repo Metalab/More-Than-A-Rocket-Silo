@@ -1,98 +1,123 @@
-Nuri, kommt aus Südkorea. Ihr größter Traum ist es in den Weltraum zu reisen. Also beschliesst sie eine Rakete zu bauen, weiß aber nicht wie. 
+Nuri is from South Korea. Her greatest dream is to travel to space. So she decides to build a space rocket but has not clue how to do that
 
 
-### 1. Pizza öffne dich
-#### Items Anfang
-* 2€
-#### Items Ende
-* Leere Pizzaschachtel
-#### Ziel
-Betrete das Metalab
 
-#### Story
-Auf der Suche nach Leuten die ihr Zeigen können wie sie eine Rakete baut findet sie das Metalab. Sie beschliesst das Metalab zu besuchen. Schon auf der Straße kann sie durchs Fenster sehen, dass Leute anwesend sind. Sie geht zur Türe und läutet, aber nichts passiert. Egal wie oft sie es versucht die Klingel macht kein Geräusch. Also fängt sie an zu rufen: Hallo... Ich will rein... bitte macht auf... . noch immer macht ihr niemand auf. Also geht sie zum Fenster und klopft an. Leute wenden ihr kurz den Kopf zu nur um gleich wieder in den Bildschirm zu starren und sie zu ignorieren. Sieh sieht sich auf der Straße um und findet eine leere Pizzaschachtel. Sie nimmt die Schachtel mit zum Fenster, klopft an und zeigt die Schachtel her. Wie vom Blitz getroffen springt eine Person auf und rennt zur Türe.
+### Open Pizza
+#### Items Required
+* None
 
-### 2. Das Akkordion
-Vor ihr steht Phantasus und erwartet voller Vorfreude die Pizza welche er bestellt hat. Er fragt wie viel es kostet, worauf sie ihm erklärt dass sie keine Pizzalieferantin ist.
+#### Items Gained
+* Empty pizza box
 
-#### Items Anfang
-* 2€
-* Leere Pizzaschachtel
-#### Items Ende
+#### Precondition
+* None
 
-#### Ziel 
-Gib Phantasus den Pentalob P2 Schraubenzieher damit er dir eine Tour gibt
+#### Condition initiated
+* None
+
+#### Goal
+Gain entry to the metalab
 
 #### Story
-Dialog:
-```
-P: Ich hab dich noch nie im Metalab gesehen. Bist du zum ersten Mal hier?
-  N: Ja
-    P: Uff.. eigentlich müsste ich dir jetzt eine Tour geben aber ich hab heute so viel zu tun...
-      N: Kann ich dir vielleicht helfen damit du mehr Zeit hast?
-        P: Wenn du mich so fragst... Mein Akkordion ist kaputt und ich brauch einen speziellen pentalobe schraubenzieher um es zu reparieren, konnte ihn aber nicht gleich finden. Finde und bring mir den Pentalobe P2 Schraubenzieher und ich gebe dir eine Tour
+Looking for people that can teach her how to build a rocket, nuri finds out about the Metalab - the finest Hackerspace in Vienna. She decides to visit. On the street, right in front of the Metalab she can see through the windows that people are present. She goes to the door and she tries to ring the bell but nothing happens. No matter how often she tries the bell doesn't sound. So she tries to shout through the door: Hi?... I'd like to come in... please open... But no reaction. So she walks up to the window and knocks. People sitting inside briefly turn their heads just to immediately turn it back and stare at their computer screens. 
+She looks around on the street and finds an empty pizza box. She takes the box to one of the windows, knocks, and shows the box. faster than the speed of light one of the guys sitting inside runs to the door and opens it.
 
-  N: Nein, ich war schon oft hier und kenn mich voll gut aus.
-    P: Cool, dann brauch ich dir auch keine Tour geben.
-      N: Ähhmm, ist schon so lange her, kannst du mir vielleicht trotzdem eine Tour geben.
-        P: Leider nein. Touren bekommen nur Neulinge. Außerdem hab ich heute schlechte Laune weil mein Akkordion kaputt ist.
-          N: Würdest du mir eine Tour geben wenn ich dir helfe das Akkordion zu reparieren?
-            P: Wenn du mich so fragst... Alles was ich brauch um das Akkordion zu reparieren ist ein spezieller Pentalobe Schraubenzieher, konnte ihn aber nicht gleich finden. Finde und bring mir den Pentalobe P2 Schraubenzieher und ich gebe dir eine Tour.
-```
+--------------------
 
-#### 3. Der Stickertisch
+### The Accordion
+#### Items Required
+* None
 
-#### Items Anfang
-* 2€
-* Leere Pizzaschachtel
+#### Items Gained
+* None 
 
-#### Items Ende
-* Kugelschreiber
-* Zwiebelsticker
-* Metalabanhänger
+#### Precondition
+* None
 
-#### Ziel
-Items finden
+#### Condition initiated
+* None
+
+#### Goal
+Find a pentalobe p2 screw driver and give it to Phantasus so he'll give you a tour
 
 #### Story
-Sie betritt das Metalab und gleich beim Eingang zum Hauptraum steht ein kleiner runder Tisch. Sie durchsucht den Tisch und findet einen Kugelschreiber, ein Zwiebelsticker (in wirklichkeit ein TOR-Sticker welchen sie nimmt weil sie Zwiebeln so gern hat), und einen Metalabanhänger aus Acryl.
-
-#### 4. Hauptraum 1
-
-#### Items Anfang
-* Kugelschreiber
-* Zwiebelsticker
-* Metalabanhänger
-* 2€
-Leere Pizzaschachtel 
-
-#### Items Ende
-
-#### Ziel
-Mit Paul sprechen um herauszufinden dass es irgendtwo im Lab fertige Pläne für eine Rakete gibt
-
-#### Story
-Sieh geht zu der einzigen Person (außer Phantasus) die im Hauptraum sitzt um beginnt ein Gespräch:
+In front of her stands Phantasus waiting for the Pizza he ordererd. He asks how much it costs and she explains to him that she is not delivering pizza.
 
 Dialog:
 ```
-N: Hallo, ich bin Nuri!
-  P: Cooler Nickname.
-    N: Das ist mein echter Name!
-      P: Oh... ich dachte.. hier im Metalab sprechen sich alle per Nickname an. Das ist so ein Hackerding...
-        N: Hmm... Ich hätte eigentlich gerne einen Hackernamen... aber welchen?
-          P: Da kann ich dir nicht helfen. Was führt dich eigentlich ins Metalab?
-            N: Ich möchte einen Weltraumrakete bauen. Ich hab gehört hier im Metalab kann man alles bauen.
-              P: Lol. Da bist du nicht die erste.
-                N: Wirklich? Hat das schon jemand gemacht?
-                  P: Nicht ganz. Aber geplant. Zeljko hat sehr detailierte Pläne für eine Rakete erstellt. Irgendtwo müssen die noch rumliegen
-                    N: Die muss ich finden! Danke!
-                      P: Viel Glück, Nuri die Austronautin
-                        N: hmmm... Nuri die Austronautin... Nurinaut... Genial, ich hab meinen Hackernamen gefunden. 
+P: I've never seen you at the Metalab before. Is it your first time visiting?
+  N: Yes
+    P: Hmm.. actually i should give you a tour right now but today i have sooo much to do...
+      N: Can i help you with something so you have time to give me a tour?
+        P: If you ask me like that... My accordion is broken and i need a special pentalobe P2 screwdriver to fix it but i couldn't find it. Find and bring me the Pentalobe P2 screwdriver and I'll give you a tour
+
+  N: No, I've been here many time und i really no my way around.
+    P: Cool, that means i don't have to give you a tour!
+      N: Erm... it's been such a long time since i was at the Metalab. Could you give me a tour anyway?
+        P: I'm sorry, but tours are only for newbies. Besides i'm in a bad mood because my accordion is broken:
+          N: Would you give me a tour if i help you repair your accordion?
+            P: If you ask me like that... All i need to fix my accordion is a special pentalobe screw driver but i couldn't find it. Find and bring me the Pentalobe P2 screwdriver and I'll give you a tour
 ```
 
+--------------------
 
+#### The Sticker Table
+#### Items Required
+* None
 
+#### Items Gained
+* Pen
+* Onion sticker
+* Metalab key tag
 
+#### Precondition
+* None
 
+#### Condition initiated
+* None
+
+#### Goal
+Find items
+
+#### Story
+She enters the Metalab und right at the entry to the main room there is a small roung table. She examines the table and finds a pen, an onion sticker (really a TOR sticker but she takes it because she really likes onions) and an acrylic Metalab key tag
+
+--------------------
+
+#### Main room 1
+
+#### Items Required
+* None
+
+#### Items Gained
+* None
+
+#### Precondition
+* None
+
+#### Condition initiated
+* Knows about the rocket blue prints
+
+#### Goal
+Talks to Paul to find out that somewhere in the lab there are blue prints for a space rocket
+
+#### Story
+She walks up to the only person sitting in the main room und starts a dialog
+
+Dialog:
+```
+N: Hi, my name is Nuri.
+  P: Nice Nickname!
+    N: But that's my real name
+      P: Oh... i just thought.. at the Metalab most people have nick names. That's a hacker thing.
+        N: Hmm... I'd really love to have a hacker name... but which?
+          P: I can't help you with that. What brings you to the Metalab?
+            N: Ich want to build a space rocket. I've heard at the Metalab you can build anything!
+              P: Lol. You're not the first wanting to build a space rocket.
+                N: Really? Someone already did that?
+                  P: Not really. But he planned it. Zeljko created very detailed blue prints. Somewhere they still gotta lie around.
+                    N: I have to find them! Thank you!
+                      P: Good luck, Nuri the Austronaut.
+                        N: Hmmm... Nuri the Austronaut... Nurinaut... I found my hackername! 
+```
 
