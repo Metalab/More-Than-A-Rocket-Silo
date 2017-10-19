@@ -44,7 +44,7 @@ P: I've never seen you at the Metalab before. Is it your first time visiting?
       N: Can i help you with something so you have time to give me a tour?
         P: If you ask me like that... My accordion is broken and i need a special pentalobe P2 screwdriver to fix it but i couldn't find it. Find and bring me the Pentalobe P2 screwdriver and I'll give you a tour
 
-  N: No, I've been here many time und i really no my way around.
+  N: No, I've been here many times and i really no my way around.
     P: Cool, that means i don't have to give you a tour!
       N: Erm... it's been such a long time since i was at the Metalab. Could you give me a tour anyway?
         P: I'm sorry, but tours are only for newbies. Besides i'm in a bad mood because my accordion is broken:
@@ -72,11 +72,11 @@ P: I've never seen you at the Metalab before. Is it your first time visiting?
 Find items
 
 #### Story
-She enters the Metalab und right at the entry to the main room there is a small roung table. She examines the table and finds a pen, an onion sticker (really a TOR sticker but she takes it because she really likes onions) and an acrylic Metalab key tag
+She enters the Metalab and right at the entry to the main room there is a small roung table. She examines the table and finds a pen, an onion sticker (really a TOR sticker but she takes it because she really likes onions) and an acrylic Metalab key tag
 
 --------------------
 
-### Main room 1
+### The Hackername
 
 #### Items Required
 
