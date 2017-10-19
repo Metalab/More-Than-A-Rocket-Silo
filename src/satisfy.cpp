@@ -57,6 +57,14 @@ public:
 private:
   std::map<Edge, EntityID> itn_;
 };
+
+struct GraphWriter {
+  void operator()(std::ostream& out) const {
+    out << "graph [bgcolor=lightgrey]" << std::endl;
+    out << "node [shape=circle color=white]" << std::endl;
+    out << "edge [style=dashed]" << std::endl;
+  }
+};
 struct cycle_detector : public b::dfs_visitor<>
 {
   cycle_detector(bool& has_cycle)
@@ -354,7 +362,7 @@ int main(int argc, char** argv) {
   }
   cerr << endl;
 
-  b::write_graphviz(std::cout, g, VertexTitleWriter(StoryBlockIDs::STORY_BLOCK_IDS->getITN()), EdgeTitleWriter(edgeToEntityID));
+  b::write_graphviz(std::cout, g, VertexTitleWriter(StoryBlockIDs::STORY_BLOCK_IDS->getITN()), EdgeTitleWriter(edgeToEntityID), GraphWriter());
 
   return 0;
 }
