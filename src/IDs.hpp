@@ -6,8 +6,8 @@
 
 using std::string;
 
-typedef int32_t EntityID;
-typedef int32_t StoryID;
+typedef int64_t EntityID;
+typedef int64_t StoryID;
 
 class StoryBlock;
 
@@ -28,6 +28,12 @@ public:
   EntityID addEntity(const string& name);
   EntityID getEntityByName(const string& name) const;
   string getEntityByID(const EntityID& id) const;
+  EIDToName getITN() {
+    return itn_;
+  }
+  NameToEID getNTI() {
+    return nti_;
+  }
 };
 
 class StoryBlockIDs {
