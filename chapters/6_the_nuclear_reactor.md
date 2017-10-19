@@ -1,0 +1,1 @@
+## In this chapter Nuri finds out about the nuclear reactor below the metalab. The entry is under the tables in the lounge. The reactor is malfunctioning and she needs to repair it because she needs a vast amount of energy to build her rocket.

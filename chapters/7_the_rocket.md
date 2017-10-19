@@ -1,0 +1,1 @@
+## In this chapter Nuri finalizes the parts required for the rocket and assembles it. Launch side is the backyard of the metalab. Also she uncovers the truth behind the anti-rocket conspiracy and neutralizes it.
