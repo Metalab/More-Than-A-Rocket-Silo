@@ -1,0 +1,7 @@
+.cproject
+.project
+.settings/
+src/*.dep
+src/*.o
+src/satisfy
+
