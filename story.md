@@ -1,3 +1,4 @@
+
 ### Open Pizza
 #### Items Required
 
@@ -6,7 +7,8 @@
 
 #### Preconditions
 
-#### Conditions initiated
+#### Conditions Initiated
+* Inside Metalab
 
 #### Goal
 Gain entry to the metalab
@@ -23,8 +25,9 @@ She looks around on the street and finds an empty pizza box. She takes the box t
 #### Items Provided
  
 #### Preconditions
+* Inside Metalab
 
-#### Conditions initiated
+#### Conditions Initiated
 
 #### Goal
 Find a pentalobe p2 screw driver and give it to Phantasus so he'll give you a tour
@@ -60,8 +63,9 @@ P: I've never seen you at the Metalab before. Is it your first time visiting?
 * Metalab key tag
 
 #### Preconditions
+* Inside Metalab
 
-#### Conditions initiated
+#### Conditions Initiated
 
 #### Goal
 Find items
@@ -74,12 +78,14 @@ She enters the Metalab und right at the entry to the main room there is a small 
 ### Main room 1
 
 #### Items Required
+* Empty pizza box
 
 #### Items Provided
 
 #### Preconditions
+* Inside Metalab
 
-#### Conditions initiated
+#### Conditions Initiated
 * Knows about the rocket blue prints
 
 #### Goal
