@@ -78,7 +78,6 @@ She enters the Metalab und right at the entry to the main room there is a small 
 ### Main room 1
 
 #### Items Required
-* Empty pizza box
 
 #### Items Provided
 
