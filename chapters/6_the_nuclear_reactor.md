@@ -13,6 +13,9 @@
 
 #### Conditions Initiated
 
+#### Room
+Metalab Cellar
+
 #### Goal
 Find a heat exchanger unit for the oxygen purification process
 
@@ -32,11 +35,14 @@ In the cellar there is a radiatior that is never used and she has approval to re
 
 #### Conditions Initiated
 
+#### Room
+Main Room
+
 #### Goal
 Buy a high power compressor on willhaben
 
 #### Story
-To purify oxygen Nuri needs a heavy duty compressor and orders it on willhaben
+To purify oxygen Nuri needs a heavy duty compressor and orders it on willhaben using the surf station in the main room
 
 ------------------
 
@@ -50,6 +56,9 @@ To purify oxygen Nuri needs a heavy duty compressor and orders it on willhaben
 #### Preconditions
 
 #### Conditions Initiated
+
+#### Room
+Heavy Machinery
 
 #### Goal
 Fix the compressor
@@ -76,6 +85,9 @@ To purify oxygen Nuri needs a heavy duty compressor. She has a broken compressor
 * Reactor fixed
 
 #### Conditions Initiated
+
+#### Room
+Reactor Room
 
 #### Goal
 Generate oxygen to fuel the rocket

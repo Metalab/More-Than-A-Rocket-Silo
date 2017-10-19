@@ -19,6 +19,9 @@
 
 #### Conditions Initiated
 
+#### Room
+Backyard
+
 #### Goal
 Assemble the rocket from all the parts
 
@@ -37,6 +40,9 @@ Nuri was able to manufacturem or find all parts required and can finally assembl
 * Inside backyard
 
 #### Conditions Initiated
+
+#### Room
+Backyard
 
 #### Goal
 Launch yourself with the rocket

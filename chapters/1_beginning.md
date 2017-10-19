@@ -11,6 +11,9 @@
 #### Conditions Initiated
 * Inside Metalab
 
+#### Room
+Street
+
 #### Goal
 Gain entry to the metalab
 
@@ -29,6 +32,9 @@ She looks around on the street and finds an empty pizza box. She takes the box t
 * Inside Metalab
 
 #### Conditions Initiated
+
+#### Room
+Anteroom
 
 #### Goal
 Find a pentalobe p2 screw driver and give it to Phantasus so he'll give you a tour
@@ -68,6 +74,9 @@ P: I've never seen you at the Metalab before. Is it your first time visiting?
 
 #### Conditions Initiated
 
+#### Room
+Main Room
+
 #### Goal
 Find items
 
@@ -87,6 +96,9 @@ She enters the Metalab and right at the entry to the main room there is a small 
 
 #### Conditions Initiated
 * Knows about the rocket blue prints
+
+#### Room
+Main Room
 
 #### Goal
 Talks to Paul to find out that somewhere in the lab there are blue prints for a space rocket

@@ -120,7 +120,7 @@ public:
   }
 };
 
-enum Sections { BEGIN, TITLE, ITEMS_REQUIRED, ITEMS_PROVIDED, PRECONDITIONS, CONDITIONS_INITIATED, GOAL, STORY, END };
+enum Sections { BEGIN, TITLE, ITEMS_REQUIRED, ITEMS_PROVIDED, PRECONDITIONS, CONDITIONS_INITIATED, ROOM ,GOAL, STORY, END };
 
 class ExpectedSection {
 private:
@@ -183,32 +183,37 @@ int main(int argc, char** argv) {
 	    break;
 	  case ITEMS_REQUIRED:
 	    if(!boost::starts_with(line, "#### Items Required")) {
-	      throw ParseException("Expected story title", lineNum, line);
+	      throw ParseException("Expected items required", lineNum, line);
 	    }
 	    break;
 	  case ITEMS_PROVIDED:
 	    if(!boost::starts_with(line, "#### Items Provided")) {
-	      throw ParseException("Expected story title", lineNum, line);
+	      throw ParseException("Expected items provided", lineNum, line);
 	    }
 	    break;
 	  case PRECONDITIONS:
 	    if(!boost::starts_with(line, "#### Preconditions")) {
-	      throw ParseException("Expected story title", lineNum, line);
+	      throw ParseException("Expected preconditions", lineNum, line);
 	    }
 	    break;
 	  case CONDITIONS_INITIATED:
 	    if(!boost::starts_with(line, "#### Conditions Initiated")) {
-	      throw ParseException("Expected story title", lineNum, line);
+	      throw ParseException("Expected initiated conditions", lineNum, line);
+	    }
+	    break;
+	  case ROOM:
+	    if(!boost::starts_with(line, "#### Room")) {
+	      throw ParseException("Expected room", lineNum, line);
 	    }
 	    break;
 	  case GOAL:
 	    if(!boost::starts_with(line, "#### Goal")) {
-	      throw ParseException("Expected story title", lineNum, line);
+	      throw ParseException("Expected goal", lineNum, line);
 	    }
 	    break;
 	  case STORY:
 	    if(!boost::starts_with(line, "#### Story")) {
-	      throw ParseException("Expected story title", lineNum, line);
+	      throw ParseException("Expected story", lineNum, line);
 	    }
 	    break;
 	  case END:
@@ -234,6 +239,9 @@ int main(int argc, char** argv) {
 	    break;
 	  case CONDITIONS_INITIATED:
 	    currentSB->add(StoryBlock::INIT_COND , line.substr(2));
+	    break;
+	  case ROOM:
+	    throw ParseException("Found list item in section room", lineNum, line);
 	    break;
 	  case GOAL:
 	    throw ParseException("Found list item in section goal", lineNum, line);
@@ -264,6 +272,12 @@ int main(int argc, char** argv) {
 	    break;
 	  case CONDITIONS_INITIATED:
 	      throw ParseException("Found non list item in section conditions initiated", lineNum, line);
+	    break;
+	  case ROOM:
+	    if(currentSB->room_.empty())
+	      currentSB->room_ = line;
+	    else
+	      throw ParseException("Field room consists of only one line", lineNum, line);
 	    break;
 	  case GOAL:
 	    currentSB->goal_ += (line + "\n");
@@ -364,10 +378,41 @@ int main(int argc, char** argv) {
 
   }
 
+  std::set<string> items_;
+  std::set<string> conditions_;
+  std::set<string> rooms_;
+  for(StoryBlock& sb : storyBlockCollection.getAll()) {
+    for(auto ir : sb.itemsRequired_)
+      items_.insert(EntityIDs::ENTITY_IDS->getEntityByID(ir));
+
+    for(auto ip : sb.itemsProvided_)
+      items_.insert(EntityIDs::ENTITY_IDS->getEntityByID(ip));
+
+    for(auto pc : sb.preconditions_)
+      conditions_.insert(EntityIDs::ENTITY_IDS->getEntityByID(pc));
+
+    for(auto ci : sb.initiatedConditions_)
+      conditions_.insert(EntityIDs::ENTITY_IDS->getEntityByID(ci));
+
+    rooms_.insert(sb.room_);
+  }
+
+  cerr << endl << "All items: ";
+  for(auto& s : items_)
+    cerr << s << ", ";
+
+  cerr << endl << "All conditions: ";
+  for(auto& s : conditions_)
+    cerr << s << ", ";
+
+  cerr << endl << "All rooms: ";
+  for(auto& s : rooms_)
+    cerr << s << ", ";
+
   bool has_cycle = false;
   cycle_detector vis(has_cycle);
   b::depth_first_search(g, visitor(vis));
-  cerr << endl << "The graph has a cycle? " << (has_cycle ? "true" : "false") << endl;
+  cerr << endl << endl << "The graph has a cycle? " << (has_cycle ? "true" : "false") << endl;
 
   b::write_graphviz(std::cout, g, VertexTitleWriter(StoryBlockIDs::STORY_BLOCK_IDS->getITN()), EdgeTitleWriter(edgeToEntityID), GraphWriter());
 

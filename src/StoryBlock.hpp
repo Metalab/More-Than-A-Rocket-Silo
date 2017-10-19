@@ -26,6 +26,7 @@ public:
   std::vector<EntityID> initiatedConditions_;
 
   string title_;
+  string room_;
   string goal_;
   string story_;
 
