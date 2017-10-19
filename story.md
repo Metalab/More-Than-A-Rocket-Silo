@@ -1,19 +1,12 @@
-Nuri is from South Korea. Her greatest dream is to travel to space. So she decides to build a space rocket but has not clue how to do that
-
-
-
 ### Open Pizza
 #### Items Required
-* None
 
-#### Items Gained
+#### Items Provided
 * Empty pizza box
 
-#### Precondition
-* None
+#### Preconditions
 
-#### Condition initiated
-* None
+#### Conditions initiated
 
 #### Goal
 Gain entry to the metalab
@@ -26,16 +19,12 @@ She looks around on the street and finds an empty pizza box. She takes the box t
 
 ### The Accordion
 #### Items Required
-* None
 
-#### Items Gained
-* None 
+#### Items Provided
+ 
+#### Preconditions
 
-#### Precondition
-* None
-
-#### Condition initiated
-* None
+#### Conditions initiated
 
 #### Goal
 Find a pentalobe p2 screw driver and give it to Phantasus so he'll give you a tour
@@ -61,20 +50,18 @@ P: I've never seen you at the Metalab before. Is it your first time visiting?
 
 --------------------
 
-#### The Sticker Table
+### The Sticker Table
 #### Items Required
-* None
 
-#### Items Gained
+
+#### Items Provided
 * Pen
 * Onion sticker
 * Metalab key tag
 
-#### Precondition
-* None
+#### Preconditions
 
-#### Condition initiated
-* None
+#### Conditions initiated
 
 #### Goal
 Find items
@@ -84,25 +71,22 @@ She enters the Metalab und right at the entry to the main room there is a small 
 
 --------------------
 
-#### Main room 1
+### Main room 1
 
 #### Items Required
-* None
 
-#### Items Gained
-* None
+#### Items Provided
 
-#### Precondition
-* None
+#### Preconditions
 
-#### Condition initiated
+#### Conditions initiated
 * Knows about the rocket blue prints
 
 #### Goal
 Talks to Paul to find out that somewhere in the lab there are blue prints for a space rocket
 
 #### Story
-She walks up to the only person sitting in the main room und starts a dialog
+She walks up to the only person sitting in the main room and starts a dialog
 
 Dialog:
 ```
