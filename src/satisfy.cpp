@@ -143,140 +143,143 @@ public:
 };
 
 int main(int argc, char** argv) {
-  std::ifstream ifs(argv[1]);
   string line;
-  ExpectedSection expected;
   StoryBlockCollection storyBlockCollection;
-  size_t lineNum = 0;
-  StoryBlock* currentSB = NULL;
-  while(std::getline(ifs, line)) {
-    ++lineNum;
 
-    boost::trim(line);
-    if(line.empty() || boost::starts_with(line, "## ")) {
-      continue;
-    } else if (line.at(0) == '-') {
-      expected.reset();
-      continue;
-    }
+  for(int i = 1; i < argc; ++i) {
+    std::ifstream ifs(argv[i]);
+    ExpectedSection expected;
+    size_t lineNum = 0;
+    StoryBlock* currentSB = NULL;
+    while(std::getline(ifs, line)) {
+      ++lineNum;
 
-    if(boost::starts_with(line, "###")) {
-      switch(expected.next()) {
-	case BEGIN:
-	  throw std::runtime_error("Reached section BEGIN");
-	  break;
-	case TITLE:
-	  if(boost::starts_with(line, "### ")) {
-	    if(currentSB != NULL) {
-	      storyBlockCollection.add(*currentSB);
-	      delete currentSB;
+      boost::trim(line);
+      if(line.empty() || boost::starts_with(line, "## ")) {
+	continue;
+      } else if (line.at(0) == '-') {
+	expected.reset();
+	continue;
+      }
+
+      if(boost::starts_with(line, "###")) {
+	switch(expected.next()) {
+	  case BEGIN:
+	    throw std::runtime_error("Reached section BEGIN");
+	    break;
+	  case TITLE:
+	    if(boost::starts_with(line, "### ")) {
+	      if(currentSB != NULL) {
+		storyBlockCollection.add(*currentSB);
+		delete currentSB;
+	      }
+	      currentSB = new StoryBlock();
+	      string s = line.substr(4);
+	      boost::trim(s);
+	      currentSB->title_ = s;
+	    } else {
+	      throw ParseException("Expected story title", lineNum, line);
 	    }
-	    currentSB = new StoryBlock();
-	    string s = line.substr(4);
-	    boost::trim(s);
-	    currentSB->title_ = s;
-	  } else {
-	    throw ParseException("Expected story title", lineNum, line);
-	  }
-	  break;
-	case ITEMS_REQUIRED:
-	  if(!boost::starts_with(line, "#### Items Required")) {
-	    throw ParseException("Expected story title", lineNum, line);
-	  }
-	  break;
-	case ITEMS_PROVIDED:
-	  if(!boost::starts_with(line, "#### Items Provided")) {
-	    throw ParseException("Expected story title", lineNum, line);
-	  }
-	  break;
-	case PRECONDITIONS:
-	  if(!boost::starts_with(line, "#### Preconditions")) {
-	    throw ParseException("Expected story title", lineNum, line);
-	  }
-	  break;
-	case CONDITIONS_INITIATED:
-	  if(!boost::starts_with(line, "#### Conditions Initiated")) {
-	    throw ParseException("Expected story title", lineNum, line);
-	  }
-	  break;
-	case GOAL:
-	  if(!boost::starts_with(line, "#### Goal")) {
-	    throw ParseException("Expected story title", lineNum, line);
-	  }
-	  break;
-	case STORY:
-	  if(!boost::starts_with(line, "#### Story")) {
-	    throw ParseException("Expected story title", lineNum, line);
-	  }
-	  break;
-	case END:
-	  throw std::runtime_error("Reached section END");
-	  break;
-      }
-    } else if (boost::starts_with(line, "* ")) {
-      switch(expected.current()) {
-	case BEGIN:
-	  throw std::runtime_error("Reached section BEGIN");
-	  break;
-	case TITLE:
-	    throw ParseException("Found trailing list item in section title", lineNum, line);
-	  break;
-	case ITEMS_REQUIRED:
-	  currentSB->add(StoryBlock::ITEMS_REQ , line.substr(2));
-	  break;
-	case ITEMS_PROVIDED:
-	  currentSB->add(StoryBlock::ITEMS_PROV, line.substr(2));
-	  break;
-	case PRECONDITIONS:
-	  currentSB->add(StoryBlock::PRE_COND , line.substr(2));
-	  break;
-	case CONDITIONS_INITIATED:
-	  currentSB->add(StoryBlock::INIT_COND , line.substr(2));
-	  break;
-	case GOAL:
-	  throw ParseException("Found list item in section goal", lineNum, line);
-	  break;
-	case STORY:
-	  throw ParseException("Found list item in section story", lineNum, line);
-	  break;
-	case END:
-	  throw std::runtime_error("Reached section END");
-	  break;
-      }
-    } else {
-      switch(expected.current()) {
-	case BEGIN:
-	  throw std::runtime_error("Reached section BEGIN");
-	  break;
-	case TITLE:
-	    throw ParseException("Found trailing text in section title", lineNum, line);
-	  break;
-	case ITEMS_REQUIRED:
-	    throw ParseException("Found non list item in section items required", lineNum, line);
-	  break;
-	case ITEMS_PROVIDED:
-	    throw ParseException("Found non list item in section items provided", lineNum, line);
-	  break;
-	case PRECONDITIONS:
-	    throw ParseException("Found non list item in section preconditions", lineNum, line);
-	  break;
-	case CONDITIONS_INITIATED:
-	    throw ParseException("Found non list item in section conditions initiated", lineNum, line);
-	  break;
-	case GOAL:
-	  currentSB->goal_ += (line + "\n");
-	  break;
-	case STORY:
-	  currentSB->story_ += (line + "\n");
-	  break;
-	case END:
-	  throw std::runtime_error("Reached section END");
-	  break;
+	    break;
+	  case ITEMS_REQUIRED:
+	    if(!boost::starts_with(line, "#### Items Required")) {
+	      throw ParseException("Expected story title", lineNum, line);
+	    }
+	    break;
+	  case ITEMS_PROVIDED:
+	    if(!boost::starts_with(line, "#### Items Provided")) {
+	      throw ParseException("Expected story title", lineNum, line);
+	    }
+	    break;
+	  case PRECONDITIONS:
+	    if(!boost::starts_with(line, "#### Preconditions")) {
+	      throw ParseException("Expected story title", lineNum, line);
+	    }
+	    break;
+	  case CONDITIONS_INITIATED:
+	    if(!boost::starts_with(line, "#### Conditions Initiated")) {
+	      throw ParseException("Expected story title", lineNum, line);
+	    }
+	    break;
+	  case GOAL:
+	    if(!boost::starts_with(line, "#### Goal")) {
+	      throw ParseException("Expected story title", lineNum, line);
+	    }
+	    break;
+	  case STORY:
+	    if(!boost::starts_with(line, "#### Story")) {
+	      throw ParseException("Expected story title", lineNum, line);
+	    }
+	    break;
+	  case END:
+	    throw std::runtime_error("Reached section END");
+	    break;
+	}
+      } else if (boost::starts_with(line, "* ")) {
+	switch(expected.current()) {
+	  case BEGIN:
+	    throw std::runtime_error("Reached section BEGIN");
+	    break;
+	  case TITLE:
+	      throw ParseException("Found trailing list item in section title", lineNum, line);
+	    break;
+	  case ITEMS_REQUIRED:
+	    currentSB->add(StoryBlock::ITEMS_REQ , line.substr(2));
+	    break;
+	  case ITEMS_PROVIDED:
+	    currentSB->add(StoryBlock::ITEMS_PROV, line.substr(2));
+	    break;
+	  case PRECONDITIONS:
+	    currentSB->add(StoryBlock::PRE_COND , line.substr(2));
+	    break;
+	  case CONDITIONS_INITIATED:
+	    currentSB->add(StoryBlock::INIT_COND , line.substr(2));
+	    break;
+	  case GOAL:
+	    throw ParseException("Found list item in section goal", lineNum, line);
+	    break;
+	  case STORY:
+	    throw ParseException("Found list item in section story", lineNum, line);
+	    break;
+	  case END:
+	    throw std::runtime_error("Reached section END");
+	    break;
+	}
+      } else {
+	switch(expected.current()) {
+	  case BEGIN:
+	    throw std::runtime_error("Reached section BEGIN");
+	    break;
+	  case TITLE:
+	      throw ParseException("Found trailing text in section title", lineNum, line);
+	    break;
+	  case ITEMS_REQUIRED:
+	      throw ParseException("Found non list item in section items required", lineNum, line);
+	    break;
+	  case ITEMS_PROVIDED:
+	      throw ParseException("Found non list item in section items provided", lineNum, line);
+	    break;
+	  case PRECONDITIONS:
+	      throw ParseException("Found non list item in section preconditions", lineNum, line);
+	    break;
+	  case CONDITIONS_INITIATED:
+	      throw ParseException("Found non list item in section conditions initiated", lineNum, line);
+	    break;
+	  case GOAL:
+	    currentSB->goal_ += (line + "\n");
+	    break;
+	  case STORY:
+	    currentSB->story_ += (line + "\n");
+	    break;
+	  case END:
+	    throw std::runtime_error("Reached section END");
+	    break;
+	}
       }
     }
+    if(currentSB != NULL)
+      storyBlockCollection.add(*currentSB);
   }
-  storyBlockCollection.add(*currentSB);
-
   Graph g;
 
   auto storyBlocks = storyBlockCollection.getAll();
@@ -360,7 +363,11 @@ int main(int argc, char** argv) {
     }
 
   }
-  cerr << endl;
+
+  bool has_cycle = false;
+  cycle_detector vis(has_cycle);
+  b::depth_first_search(g, visitor(vis));
+  cerr << endl << "The graph has a cycle? " << (has_cycle ? "true" : "false") << endl;
 
   b::write_graphviz(std::cout, g, VertexTitleWriter(StoryBlockIDs::STORY_BLOCK_IDS->getITN()), EdgeTitleWriter(edgeToEntityID), GraphWriter());
 
