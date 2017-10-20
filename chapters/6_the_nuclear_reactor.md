@@ -10,6 +10,7 @@
 
 #### Preconditions
 * Lights restored in the cellar
+* Jour-Fix approval to remove the cellar radiator
 
 #### Conditions Initiated
 
@@ -24,31 +25,13 @@ In the cellar there is a radiatior that is never used and she has approval to re
 
 ------------------
 
-### Order a broken compressor on willhaben
+### Create a heavy duty compressor from vacuum cleaners 
 #### Items Required
-* 200€
-
-#### Items Provided
-* Broken heavy duty compressor
-
-#### Preconditions
-
-#### Conditions Initiated
-
-#### Room
-Main Room
-
-#### Goal
-Buy a high power compressor on willhaben
-
-#### Story
-To purify oxygen Nuri needs a heavy duty compressor and orders it on willhaben using the surf station in the main room
-
-------------------
-
-### Fixed the broken compressor
-#### Items Required
-* Broken heavy duty compressor
+* Red vacuum
+* Blue vaccuum
+* Green vacuum
+* Yellow vacuum
+* Screw driver set
 
 #### Items Provided
 * Heavy duty compressor
@@ -61,16 +44,40 @@ To purify oxygen Nuri needs a heavy duty compressor and orders it on willhaben u
 Heavy Machinery
 
 #### Goal
-Fix the compressor
+Reverse the vacuum cleaners and combine them into a heavy duty compressor
 
 #### Story
-To purify oxygen Nuri needs a heavy duty compressor. She has a broken compressor and fixes it
+To purify oxygen Nuri needs a heavy duty compressor. She collecs all four vacuum cleaners available at the Metalab and reverses them to create on big heavy duty compressor
+
+------------------
+
+
+### Hookup the HD compressor to the reactor
+#### Items Required
+* Heavy duty compressor
+
+#### Items Provided
+
+
+#### Preconditions
+* Reactor fixed
+
+#### Conditions Initiated
+* Operational heavy duty compressor 
+
+#### Room
+Reactor room
+
+#### Goal
+Hookup the heavy duty compressor to the reactor for an extra power boost
+
+#### Story
+To purify oxygen Nuri built a heavy duty compressor from vacuum cleaners. Now she needs a lot of power to operate it. She hooks up the compressor directly to the nuclear reactor.
 
 ------------------
 
 ### Purify Oxygen
 #### Items Required
-* Heavy duty compressor
 * Heat exchanger
 * Molecular sieve
 * Turbine
@@ -82,7 +89,7 @@ To purify oxygen Nuri needs a heavy duty compressor. She has a broken compressor
 * Oxygen
 
 #### Preconditions
-* Reactor fixed
+* Operational heavy duty compressor 
 
 #### Conditions Initiated
 

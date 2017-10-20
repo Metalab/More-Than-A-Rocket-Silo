@@ -8,7 +8,7 @@
 * Cellar Key
 
 #### Preconditions
-* Knows the color of the right key
+* Knows the color of the cellar key
 
 #### Conditions Initiated
 
