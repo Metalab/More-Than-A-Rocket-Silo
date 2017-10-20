@@ -5,10 +5,8 @@
 * Nose Cone
 * Payload System
 * Guidance System
-* Oxygen
-* Fuel
-* Oxydizer
-* Pumps
+* Nitrous oxide
+* Polybutadiene
 * Nozzle
 * Fins
 
