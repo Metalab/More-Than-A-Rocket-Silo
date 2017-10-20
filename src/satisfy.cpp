@@ -142,14 +142,29 @@ public:
   }
 };
 
-string make_bold_text(const string& s) {
+enum COLORS {
+  BLACK=30,
+  RED=31,
+  GREEN=32,
+  YELLOW=33,
+  BLUE=34,
+  PINK=35,
+  CYAN=36,
+  WHITE=37,
+  NORMAL=39
+};
+
+string make_color(const string& s, const COLORS& c) {
+  return "\033[0;" + std::to_string(c) + "m" + s + "\033[0;39m";
+}
+
+string make_bold(const string& s) {
   return "\033[1m" + s + "\033[0m";
 }
 
 int main(int argc, char** argv) {
   string line;
   StoryBlockCollection storyBlockCollection;
-
   for(int i = 1; i < argc; ++i) {
     std::ifstream ifs(argv[i]);
     ExpectedSection expected;
@@ -354,7 +369,7 @@ int main(int argc, char** argv) {
     }
   }
 
-  cerr << make_bold_text("Fully satisfied: ") << endl;
+  cerr << make_color(make_bold("Fully satisfied: "),BLUE) << endl;
   for (i = solve_order.begin(); i != solve_order.end(); ++i) {
     StoryBlock sb = StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*i);
     size_t reqcnt = sb.itemsRequired_.size() + sb.preconditions_.size();
@@ -363,7 +378,7 @@ int main(int argc, char** argv) {
     }
   }
 
-  cerr << endl << make_bold_text("Not fully satisfied: ") << endl;
+  cerr << endl << make_color(make_bold("Not fully satisfied: "), PINK) << endl;
   for (i = solve_order.begin(); i != solve_order.end(); ++i) {
     StoryBlock sb = StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*i);
     size_t reqcnt = sb.itemsRequired_.size() + sb.preconditions_.size();
@@ -377,13 +392,13 @@ int main(int argc, char** argv) {
     copy.removeStoryBlock(v);
   }
 
-  cerr << endl << make_bold_text("Orphans: ") << endl;
+  cerr << endl << make_color(make_bold("Orphans: "), RED) << endl;
   for(auto& orphane : copy.getITN()) {
     cerr << orphane.second.title_ << endl;
   }
 
   std::multimap<int, string> timeToTitle;
-  cerr << endl << make_bold_text("Story blocks with same group number can be made in parallel. lower numbers need to be solved first") << endl;
+  cerr << endl << make_color(make_bold("Story blocks with same group number can be made in parallel. lower numbers need to be solved first"), GREEN) << endl;
   {
     b::graph_traits<Graph>::vertex_iterator i, iend;
     for (boost::tie(i,iend) = vertices(g); i != iend; ++i)
@@ -412,22 +427,22 @@ int main(int argc, char** argv) {
     rooms_.insert(sb.room_);
   }
 
-  cerr << endl << make_bold_text("All items: ");
+  cerr << endl << make_bold("All items: ");
   for(auto& s : items_)
     cerr << s << ", ";
 
-  cerr << endl << make_bold_text("All conditions: ");
+  cerr << endl << make_bold("All conditions: ");
   for(auto& s : conditions_)
     cerr << s << ", ";
 
-  cerr << endl << make_bold_text("All rooms: ");
+  cerr << endl << make_bold("All rooms: ");
   for(auto& s : rooms_)
     cerr << s << ", ";
 
   bool has_cycle = false;
   cycle_detector vis(has_cycle);
   b::depth_first_search(g, visitor(vis));
-  cerr << endl << endl << make_bold_text("Graph has a cycle:") << (has_cycle ? "true" : "false") << endl;
+  cerr << endl << endl << make_bold("Graph has a cycle:") << (has_cycle ? "true" : "false") << endl;
 
   b::write_graphviz(std::cout, g, VertexTitleWriter(StoryBlockIDs::STORY_BLOCK_IDS->getITN()), EdgeTitleWriter(edgeToEntityID), GraphWriter());
 
