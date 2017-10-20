@@ -162,26 +162,23 @@ string make_bold(const string& s) {
   return "\033[1m" + s + "\033[0m";
 }
 
-int main(int argc, char** argv) {
+void parse(std::istream& is, StoryBlockCollection& storyBlockCollection) {
   string line;
-  StoryBlockCollection storyBlockCollection;
-  for(int i = 1; i < argc; ++i) {
-    std::ifstream ifs(argv[i]);
-    ExpectedSection expected;
-    size_t lineNum = 0;
-    StoryBlock* currentSB = NULL;
-    while(std::getline(ifs, line)) {
-      ++lineNum;
+  ExpectedSection expected;
+   size_t lineNum = 0;
+   StoryBlock* currentSB = NULL;
+   while(std::getline(is, line)) {
+     ++lineNum;
 
-      boost::trim(line);
-      if(line.empty() || boost::starts_with(line, "## ")) {
+     boost::trim(line);
+     if(line.empty() || boost::starts_with(line, "## ")) {
 	continue;
-      } else if (line.at(0) == '-') {
+     } else if (line.at(0) == '-') {
 	expected.reset();
 	continue;
-      }
+     }
 
-      if(boost::starts_with(line, "###")) {
+     if(boost::starts_with(line, "###")) {
 	switch(expected.next()) {
 	  case BEGIN:
 	    throw std::runtime_error("Reached section BEGIN");
@@ -239,7 +236,7 @@ int main(int argc, char** argv) {
 	    throw std::runtime_error("Reached section END");
 	    break;
 	}
-      } else if (boost::starts_with(line, "* ")) {
+     } else if (boost::starts_with(line, "* ")) {
 	switch(expected.current()) {
 	  case BEGIN:
 	    throw std::runtime_error("Reached section BEGIN");
@@ -272,7 +269,7 @@ int main(int argc, char** argv) {
 	    throw std::runtime_error("Reached section END");
 	    break;
 	}
-      } else {
+     } else {
 	switch(expected.current()) {
 	  case BEGIN:
 	    throw std::runtime_error("Reached section BEGIN");
@@ -308,10 +305,16 @@ int main(int argc, char** argv) {
 	    throw std::runtime_error("Reached section END");
 	    break;
 	}
-      }
-    }
-    if(currentSB != NULL)
-      storyBlockCollection.add(*currentSB);
+     }
+   }
+   if(currentSB != NULL)
+     storyBlockCollection.add(*currentSB);
+}
+int main(int argc, char** argv) {
+  StoryBlockCollection storyBlockCollection;
+  for(int i = 1; i < argc; ++i) {
+    std::ifstream ifs(argv[i]);
+    parse(ifs, storyBlockCollection);
   }
   Graph g;
 
@@ -348,41 +351,40 @@ int main(int argc, char** argv) {
 
 
   typedef std::list<Vertex> SolveOrder;
-  SolveOrder::iterator i;
+  SolveOrder::iterator sit;
   SolveOrder solve_order;
 
   topological_sort(g, std::front_inserter(solve_order));
 
-
   // Parallel ordering
   std::vector<int> time(solve_order.size(), 0);
-  for (i = solve_order.begin(); i != solve_order.end(); ++i) {
+  for (sit = solve_order.begin(); sit != solve_order.end(); ++sit) {
     // Walk through the in_edges an calculate the maximum time.
-    if (in_degree (*i, g) > 0) {
+    if (in_degree (*sit, g) > 0) {
       Graph::in_edge_iterator j, j_end;
       int maxdist=0;
       // Through the order from topological sort, we are sure that every
       // time we are using here is already initialized.
-      for (boost::tie(j, j_end) = in_edges(*i, g); j != j_end; ++j)
+      for (boost::tie(j, j_end) = in_edges(*sit, g); j != j_end; ++j)
 	maxdist=(std::max)(time[source(*j, g)], maxdist);
-      time[*i]=maxdist+1;
+      time[*sit]=maxdist+1;
     }
   }
 
   cerr << make_color(make_bold("Fully satisfied: "),BLUE) << endl;
-  for (i = solve_order.begin(); i != solve_order.end(); ++i) {
-    StoryBlock sb = StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*i);
+  for (sit = solve_order.begin(); sit != solve_order.end(); ++sit) {
+    StoryBlock sb = StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*sit);
     size_t reqcnt = sb.itemsRequired_.size() + sb.preconditions_.size();
-    if (in_degree (*i, g) == reqcnt) {
+    if (in_degree (*sit, g) == reqcnt) {
       cerr << sb.title_ << endl;
     }
   }
 
   cerr << endl << make_color(make_bold("Not fully satisfied: "), PINK) << endl;
-  for (i = solve_order.begin(); i != solve_order.end(); ++i) {
-    StoryBlock sb = StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*i);
+  for (sit = solve_order.begin(); sit != solve_order.end(); ++sit) {
+    StoryBlock sb = StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*sit);
     size_t reqcnt = sb.itemsRequired_.size() + sb.preconditions_.size();
-    if (in_degree (*i, g) != reqcnt) {
+    if (in_degree (*sit, g) != reqcnt) {
       cerr << sb.title_ << endl;
     }
   }
@@ -399,11 +401,11 @@ int main(int argc, char** argv) {
 
   std::multimap<int, string> timeToTitle;
   cerr << endl << make_color(make_bold("Story blocks with same group number can be made in parallel. lower numbers need to be solved first"), GREEN) << endl;
-  {
-    b::graph_traits<Graph>::vertex_iterator i, iend;
-    for (boost::tie(i,iend) = vertices(g); i != iend; ++i)
-      timeToTitle.insert({time[*i],StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*i).title_});
-  }
+
+  b::graph_traits<Graph>::vertex_iterator vit, iend;
+  for (boost::tie(vit,iend) = vertices(g); vit != iend; ++vit)
+    timeToTitle.insert({time[*vit],StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*vit).title_});
+
 
   for(auto& p : timeToTitle)
     cerr << p.second << " = " << p.first << endl;
