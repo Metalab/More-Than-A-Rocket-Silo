@@ -142,6 +142,10 @@ public:
   }
 };
 
+string make_bold_text(const string& s) {
+  return "\033[1m" + s + "\033[0m";
+}
+
 int main(int argc, char** argv) {
   string line;
   StoryBlockCollection storyBlockCollection;
@@ -327,56 +331,67 @@ int main(int argc, char** argv) {
     }
   }
 
-  {
-    typedef std::list<Vertex> SolveOrder;
-    SolveOrder::iterator i;
-    SolveOrder solve_order;
 
-    topological_sort(g, std::front_inserter(solve_order));
+  typedef std::list<Vertex> SolveOrder;
+  SolveOrder::iterator i;
+  SolveOrder solve_order;
+
+  topological_sort(g, std::front_inserter(solve_order));
 
 
-    // Parallel ordering
-    std::vector<int> time(solve_order.size(), 0);
-    for (i = solve_order.begin(); i != solve_order.end(); ++i) {
-      // Walk through the in_edges an calculate the maximum time.
-      if (in_degree (*i, g) > 0) {
-        Graph::in_edge_iterator j, j_end;
-        int maxdist=0;
-        // Through the order from topological sort, we are sure that every
-        // time we are using here is already initialized.
-        for (boost::tie(j, j_end) = in_edges(*i, g); j != j_end; ++j)
-          maxdist=(std::max)(time[source(*j, g)], maxdist);
-        time[*i]=maxdist+1;
-      }
+  // Parallel ordering
+  std::vector<int> time(solve_order.size(), 0);
+  for (i = solve_order.begin(); i != solve_order.end(); ++i) {
+    // Walk through the in_edges an calculate the maximum time.
+    if (in_degree (*i, g) > 0) {
+      Graph::in_edge_iterator j, j_end;
+      int maxdist=0;
+      // Through the order from topological sort, we are sure that every
+      // time we are using here is already initialized.
+      for (boost::tie(j, j_end) = in_edges(*i, g); j != j_end; ++j)
+	maxdist=(std::max)(time[source(*j, g)], maxdist);
+      time[*i]=maxdist+1;
     }
-
-    cerr << "Not fully satisfied: " << endl;
-    for (i = solve_order.begin(); i != solve_order.end(); ++i) {
-      StoryBlock sb = StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*i);
-      size_t reqcnt = sb.itemsRequired_.size() + sb.preconditions_.size();
-      if (in_degree (*i, g) != reqcnt) {
-	cerr << sb.title_ << endl;
-      }
-    }
-
-    StoryBlockIDs copy = *StoryBlockIDs::STORY_BLOCK_IDS;
-    for(auto& v : solve_order) {
-      copy.removeStoryBlock(v);
-    }
-
-    cerr << endl << "Orphans: " << endl;
-    for(auto& orphane : copy.getITN()) {
-      cerr << orphane.second.title_ << endl;
-    }
-
-    cerr << endl << "Parallel ordering, story blocks with same group number can be made in parallel. lower numbers need to be solved first" << endl;
-    {
-      b::graph_traits<Graph>::vertex_iterator i, iend;
-      for (boost::tie(i,iend) = vertices(g); i != iend; ++i)
-        cerr << StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*i).title_ << " = " << time[*i] << endl;
-    }
-
   }
+
+  cerr << make_bold_text("Fully satisfied: ") << endl;
+  for (i = solve_order.begin(); i != solve_order.end(); ++i) {
+    StoryBlock sb = StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*i);
+    size_t reqcnt = sb.itemsRequired_.size() + sb.preconditions_.size();
+    if (in_degree (*i, g) == reqcnt) {
+      cerr << sb.title_ << endl;
+    }
+  }
+
+  cerr << endl << make_bold_text("Not fully satisfied: ") << endl;
+  for (i = solve_order.begin(); i != solve_order.end(); ++i) {
+    StoryBlock sb = StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*i);
+    size_t reqcnt = sb.itemsRequired_.size() + sb.preconditions_.size();
+    if (in_degree (*i, g) != reqcnt) {
+      cerr << sb.title_ << endl;
+    }
+  }
+
+  StoryBlockIDs copy = *StoryBlockIDs::STORY_BLOCK_IDS;
+  for(auto& v : solve_order) {
+    copy.removeStoryBlock(v);
+  }
+
+  cerr << endl << make_bold_text("Orphans: ") << endl;
+  for(auto& orphane : copy.getITN()) {
+    cerr << orphane.second.title_ << endl;
+  }
+
+  std::multimap<int, string> timeToTitle;
+  cerr << endl << make_bold_text("Story blocks with same group number can be made in parallel. lower numbers need to be solved first") << endl;
+  {
+    b::graph_traits<Graph>::vertex_iterator i, iend;
+    for (boost::tie(i,iend) = vertices(g); i != iend; ++i)
+      timeToTitle.insert({time[*i],StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*i).title_});
+  }
+
+  for(auto& p : timeToTitle)
+    cerr << p.second << " = " << p.first << endl;
 
   std::set<string> items_;
   std::set<string> conditions_;
@@ -397,22 +412,22 @@ int main(int argc, char** argv) {
     rooms_.insert(sb.room_);
   }
 
-  cerr << endl << "All items: ";
+  cerr << endl << make_bold_text("All items: ");
   for(auto& s : items_)
     cerr << s << ", ";
 
-  cerr << endl << "All conditions: ";
+  cerr << endl << make_bold_text("All conditions: ");
   for(auto& s : conditions_)
     cerr << s << ", ";
 
-  cerr << endl << "All rooms: ";
+  cerr << endl << make_bold_text("All rooms: ");
   for(auto& s : rooms_)
     cerr << s << ", ";
 
   bool has_cycle = false;
   cycle_detector vis(has_cycle);
   b::depth_first_search(g, visitor(vis));
-  cerr << endl << endl << "The graph has a cycle? " << (has_cycle ? "true" : "false") << endl;
+  cerr << endl << endl << make_bold_text("Graph has a cycle:") << (has_cycle ? "true" : "false") << endl;
 
   b::write_graphviz(std::cout, g, VertexTitleWriter(StoryBlockIDs::STORY_BLOCK_IDS->getITN()), EdgeTitleWriter(edgeToEntityID), GraphWriter());
 
