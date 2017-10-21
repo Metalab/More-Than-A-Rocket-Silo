@@ -1,4 +1,4 @@
-## Nuri is from South Korea. Her greatest dream is to travel to space. So she decides to build a space rocket but has not clue how to do that
+## Nuri is from South Korea. Her greatest dream is to be an astronaut her eyes are to bad for NASA. So she decides to build a space rocket herself but has not clue how to do that
 
 ### Open Pizza
 #### Items Required
@@ -18,7 +18,7 @@ Street
 Gain entry to the metalab
 
 #### Story
-Looking for people that can teach her how to build a rocket, nuri finds out about the Metalab - the finest Hackerspace in Vienna. She decides to visit. On the street, right in front of the Metalab she can see through the windows that people are present. She goes to the door and she tries to ring the bell but nothing happens. No matter how often she tries the bell doesn't sound. So she tries to shout through the door: Hi?... I'd like to come in... please open... But no reaction. So she walks up to the window and knocks. People sitting inside briefly turn their heads just to immediately turn it back and stare at their computer screens. 
+Looking for people that can teach her how to build a rocket, Nuri finds out about the Metalab - the finest Hackerspace in Vienna. She decides to visit. On the street, right in front of the Metalab she can see through the windows that people are present. She goes to the door and she tries to ring the bell but nothing happens. No matter how often she tries the bell doesn't sound. So she tries to shout through the door: Hi?... I'd like to come in... please open... But no reaction. So she walks up to the window and knocks. People sitting inside briefly turn their heads just to immediately turn it back and stare at their computer screens. 
 She looks around on the street and finds an empty pizza box. She takes the box to one of the windows, knocks, and shows the box. faster than the speed of light one of the guys sitting inside runs to the door and opens it.
 
 --------------------

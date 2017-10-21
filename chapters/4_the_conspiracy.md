@@ -1,1 +1,1 @@
-## In this chapter Nuri finds out why Zjelko wasn't able to actually build the rocket. There is a conspiracy to be discovered.
+## In this chapter Nuri finds out why Zjelko wasn't able to actually build the rocket. There is a conspiracy involving all governments of the world and aliens. Earth has been denied the right for space travel since humanity has been deemed not evolved enough by the galactic space travel agency. All rocket launches since the 60s have been fake and Zjelko was abducted because he came close to building his space rocket.
