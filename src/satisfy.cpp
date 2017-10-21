@@ -1,5 +1,3 @@
-#include <boost/algorithm/string.hpp>
-#include <boost/algorithm/string/predicate.hpp>
 #include <string>
 #include <vector>
 #include <cstdint>
@@ -12,6 +10,8 @@
 #include <iterator>
 #include <algorithm>
 #include <time.h>
+#include <boost/algorithm/string.hpp>
+#include <boost/algorithm/string/predicate.hpp>
 #include <boost/utility.hpp>
 #include <boost/graph/adjacency_list.hpp>
 #include <boost/graph/topological_sort.hpp>
@@ -19,7 +19,6 @@
 #include <boost/graph/dijkstra_shortest_paths.hpp>
 #include <boost/graph/visitors.hpp>
 #include <boost/graph/graphviz.hpp>
-
 
 #include "IDs.hpp"
 #include "StoryBlock.hpp"
@@ -38,13 +37,13 @@ typedef typename b::graph_traits<Graph>::edge_descriptor Edge;
 
 class VertexTitleWriter {
 public:
-  VertexTitleWriter(SIDToName itn) : itn_(itn) {}
+  VertexTitleWriter(SBToName itn) : itn_(itn) {}
   template <class VertexOrEdge>
   void operator()(std::ostream& out, const VertexOrEdge& v) {
     out << "[label=\"" << itn_[v].title_ << "\"]";
   }
 private:
-  SIDToName itn_;
+  SBToName itn_;
 };
 
 class EdgeTitleWriter {
@@ -326,8 +325,8 @@ int main(int argc, char** argv) {
       for(StoryBlock& sb2 : storyBlocks) {
         for(EntityID eid2: sb2.itemsRequired_) {
           if(eid1 == eid2) {
-            Edge e = b::add_edge(StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByName(sb1),
-				 StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByName(sb2),
+            Edge e = b::add_edge(StoryBlockIDs::STORY_BLOCK_IDS->getStoryIDByName(sb1),
+				 StoryBlockIDs::STORY_BLOCK_IDS->getStoryIDByName(sb2),
 				 EntityIDs::ENTITY_IDS->getEntityByID(eid1), g).first;
             edgeToEntityID[e] = eid1;
           }
@@ -339,8 +338,8 @@ int main(int argc, char** argv) {
       for(StoryBlock& sb2 : storyBlocks) {
 	for(EntityID eid2: sb2.preconditions_) {
 	  if(eid1 == eid2) {
-	    Edge e = b::add_edge(StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByName(sb1),
-			StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByName(sb2),
+	    Edge e = b::add_edge(StoryBlockIDs::STORY_BLOCK_IDS->getStoryIDByName(sb1),
+			StoryBlockIDs::STORY_BLOCK_IDS->getStoryIDByName(sb2),
 			EntityIDs::ENTITY_IDS->getEntityByID(eid1), g).first;
 	    edgeToEntityID[e] = eid1;
 	  }
@@ -395,7 +394,7 @@ int main(int argc, char** argv) {
   }
 
   cerr << endl << make_color(make_bold("Orphans: "), RED) << endl;
-  for(auto& orphane : copy.getITN()) {
+  for(auto& orphane : copy.getSTN()) {
     cerr << orphane.second.title_ << endl;
   }
 
@@ -446,7 +445,7 @@ int main(int argc, char** argv) {
   b::depth_first_search(g, visitor(vis));
   cerr << endl << endl << make_bold("Graph has a cycle:") << (has_cycle ? "true" : "false") << endl;
 
-  b::write_graphviz(std::cout, g, VertexTitleWriter(StoryBlockIDs::STORY_BLOCK_IDS->getITN()), EdgeTitleWriter(edgeToEntityID), GraphWriter());
+  b::write_graphviz(std::cout, g, VertexTitleWriter(StoryBlockIDs::STORY_BLOCK_IDS->getSTN()), EdgeTitleWriter(edgeToEntityID), GraphWriter());
 
   return 0;
 }

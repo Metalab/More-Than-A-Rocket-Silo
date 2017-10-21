@@ -17,7 +17,7 @@ EntityID EntityIDs::addEntity(const string& name) {
   }
 }
 
-EntityID EntityIDs::getEntityByName(const string& name) const {
+EntityID EntityIDs::getEntityIDByName(const string& name) const {
   auto it = nti_.find(name);
   if(it == nti_.end())
     return -1;
@@ -36,39 +36,39 @@ string EntityIDs::getEntityByID(const EntityID& id) const {
 StoryBlockIDs::StoryBlockIDs() {}
 
 StoryID StoryBlockIDs::addStoryBlock(const StoryBlock& sb) {
-  auto it = nti_.find(sb);
-  if(it == nti_.end()) {
-    nti_[sb] = last_;
-    itn_[last_] = sb;
+  auto it = nts_.find(sb);
+  if(it == nts_.end()) {
+    nts_[sb] = last_;
+    stn_[last_] = sb;
     return last_++;
   } else {
     return (*it).second;
   }
 }
 
-StoryID StoryBlockIDs::getStoryBlockByName(const StoryBlock& sb) const {
-  auto it = nti_.find(sb);
-  if(it == nti_.end())
+StoryID StoryBlockIDs::getStoryIDByName(const StoryBlock& sb) const {
+  auto it = nts_.find(sb);
+  if(it == nts_.end())
     return -1;
   else
     return (*it).second;
 }
 
 StoryBlock StoryBlockIDs::getStoryBlockByID(const StoryID& id) const {
-  auto it = itn_.find(id);
-  if(it == itn_.end())
+  auto it = stn_.find(id);
+  if(it == stn_.end())
     throw std::runtime_error("Unknown StoryBlockID");
   else
     return (*it).second;
 }
 
 void StoryBlockIDs::removeStoryBlock(const StoryID& id) {
-  auto it = itn_.find(id);
-  if(it == itn_.end())
+  auto it = stn_.find(id);
+  if(it == stn_.end())
     throw std::runtime_error("Attempt to remove unknown StoryBlockID");
   else {
-    nti_.erase((*it).second);
-    itn_.erase(it);
+    nts_.erase((*it).second);
+    stn_.erase(it);
   }
 }
 

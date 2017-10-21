@@ -13,8 +13,8 @@ class StoryBlock;
 
 typedef std::map<string, EntityID> NameToEID;
 typedef std::map<EntityID, string> EIDToName;
-typedef std::map<StoryBlock, StoryID> NameToSID;
-typedef std::map<StoryID, StoryBlock> SIDToName;
+typedef std::map<StoryBlock, StoryID> NameToSB;
+typedef std::map<StoryID, StoryBlock> SBToName;
 
 class EntityIDs {
 private:
@@ -26,7 +26,7 @@ public:
   EntityIDs();
 
   EntityID addEntity(const string& name);
-  EntityID getEntityByName(const string& name) const;
+  EntityID getEntityIDByName(const string& name) const;
   string getEntityByID(const EntityID& id) const;
   EIDToName getITN() {
     return itn_;
@@ -38,22 +38,22 @@ public:
 
 class StoryBlockIDs {
 private:
-  NameToSID nti_;
-  SIDToName itn_;
+  NameToSB nts_;
+  SBToName stn_;
   StoryID last_ = 0;
 public:
   static StoryBlockIDs* STORY_BLOCK_IDS;
   StoryBlockIDs();
 
   StoryID addStoryBlock(const StoryBlock& sb);
-  StoryID getStoryBlockByName(const StoryBlock& sb) const;
+  StoryID getStoryIDByName(const StoryBlock& sb) const;
   StoryBlock getStoryBlockByID(const StoryID& id) const;
   void removeStoryBlock(const StoryID& id);
-  SIDToName getITN() {
-    return itn_;
+  SBToName getSTN() {
+    return stn_;
   }
-  NameToSID getNTI() {
-    return nti_;
+  NameToSB getNTS() {
+    return nts_;
   }
 };
 
