@@ -50,7 +50,7 @@ Upstairs there is a fuse box and one of the fuses is missing. If she tries to pu
 
 ### Find a place to sleep\nin the cellar
 #### Items Required
-* Blanket 
+* Pillow 
 
 #### Items Provided
 

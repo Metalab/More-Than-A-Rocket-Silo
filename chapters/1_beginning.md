@@ -148,7 +148,6 @@ In the main room there is a PC free to use for everyone. It has been setup to on
 --------------------
 
 ### The Lounge Musician
-
 #### Items Required
 
 #### Items Provided
@@ -169,3 +168,71 @@ Help Amir to complete the lyrics to his song
 #### Story
 She walks into the louge and meets Amir which is sitting there and plays the guitar. She tells him that she read in the wiki that he is teaching people how to laser cut and that she wants to learn how to. Amir is willing to teach her, but first he wants to finish his song. Nuri helps him by completing each sentence of the lyrics with a word.
 
+--------------------
+
+### Create a pillow\nfrom PU foam and\n a trash bag
+#### Items Required
+* PU foam
+* Trash bag
+
+#### Items Provided
+* Pillow
+
+#### Preconditions
+* Day 1
+* Sleepy
+
+#### Conditions Initiated
+
+#### Room
+Heavy Machinery
+
+#### Goal
+Create a pillow so you can sleep in the cellar
+
+#### Story
+Create a pillow from PU foam and a trash bag so you can sleep in the cellar
+
+--------------------
+
+### Pick up stuff in the kitchen
+#### Items Required
+
+#### Items Provided
+* Trash bag
+
+#### Preconditions
+* Day 1 
+
+#### Conditions Initiated
+
+#### Room
+Kitchen
+
+#### Goal
+Pickup stuff
+
+#### Story
+Pickup stuff
+
+--------------------
+
+### Pick up stuff in the\nheavy machinery
+#### Items Required
+
+#### Items Provided
+* PU foam
+
+#### Preconditions
+* Day 1 
+
+#### Conditions Initiated
+
+#### Room
+Heavy machinery
+
+#### Goal
+Pickup stuff
+
+#### Story
+Pickup stuff
