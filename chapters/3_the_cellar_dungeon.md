@@ -47,7 +47,7 @@ Upstairs there is a fuse box and one of the fuses is missing. If she tries to pu
 ------------------
 
 
-### Convert used tires to compact fuel
+### Convert used tires\nto compact fuel
 #### Items Required
 * Cellar key
 * Jacuzzi

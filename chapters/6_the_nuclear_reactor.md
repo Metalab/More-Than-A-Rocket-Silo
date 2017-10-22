@@ -1,6 +1,6 @@
 ## In this chapter Nuri finds out about the nuclear reactor below the metalab. The entry is under the tables in the lounge. The reactor is malfunctioning and she needs to repair it because she needs a vast amount of energy to build her rocket.
 
-### Create a HD compressor from vacuum cleaners 
+### Create a HD compressor\nfrom vacuum cleaners 
 #### Items Required
 * Red vacuum
 * Blue vaccuum
@@ -27,7 +27,7 @@ To purify oxygen Nuri needs a heavy duty compressor. She collecs all four vacuum
 ------------------
 
 
-### Hookup the HD compressor to the reactor
+### Hookup the HD compressor\nto the reactor
 #### Items Required
 * Heavy duty compressor
 

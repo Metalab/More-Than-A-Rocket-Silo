@@ -1,6 +1,6 @@
 ## All Metalab members have been abducted by the galactic space travel agency. Nuri is the only one left because she was in the heavily shielded reactor room and scanners didn't pick her up. And since Metalab is a self-organized space she is in charge and can do whatever she wants.
 
-### Harvert a barometer sensor from a weather station
+### Harvert a barometer\nsensor from a weather station
 #### Items Required
 * Screw driver set
 
