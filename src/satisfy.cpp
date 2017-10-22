@@ -37,12 +37,19 @@ typedef typename b::graph_traits<Graph>::edge_descriptor Edge;
 
 class VertexTitleWriter {
 public:
-  VertexTitleWriter(SBToName itn) : itn_(itn) {}
+  VertexTitleWriter(Graph& g, SBToName itn) : g_(g) ,itn_(itn) {}
   template <class VertexOrEdge>
   void operator()(std::ostream& out, const VertexOrEdge& v) {
-    out << "[label=\"" << itn_[v].title_ << "\"]";
+    string color="red";
+    StoryBlock& sb = itn_[v];
+    if(in_degree(v, g_) == (sb.itemsRequired_.size() + sb.preconditions_.size())) {
+      color="blue";
+    }
+
+    out << "[label=\"" << itn_[v].title_ << "\" color=\""+ color + "\"]";
   }
 private:
+  Graph& g_;
   SBToName itn_;
 };
 
@@ -309,6 +316,7 @@ void parse(std::istream& is, StoryBlockCollection& storyBlockCollection) {
    if(currentSB != NULL)
      storyBlockCollection.add(*currentSB);
 }
+
 int main(int argc, char** argv) {
   StoryBlockCollection storyBlockCollection;
   for(int i = 1; i < argc; ++i) {
@@ -445,7 +453,7 @@ int main(int argc, char** argv) {
   b::depth_first_search(g, visitor(vis));
   cerr << endl << endl << make_bold("Graph has a cycle:") << (has_cycle ? "true" : "false") << endl;
 
-  b::write_graphviz(std::cout, g, VertexTitleWriter(StoryBlockIDs::STORY_BLOCK_IDS->getSTN()), EdgeTitleWriter(edgeToEntityID), GraphWriter());
+  b::write_graphviz(std::cout, g, VertexTitleWriter(g, StoryBlockIDs::STORY_BLOCK_IDS->getSTN()), EdgeTitleWriter(edgeToEntityID), GraphWriter());
 
   return 0;
 }
