@@ -18,7 +18,7 @@ Whateverlab
 Get the cellar key
 
 #### Story
-Nuri heard that there is a cellar full of useful stuff below the Metalab. But to get there she needs the cellar key. In the Whateverlab she finds
+Nuri heard that there is a cellar full of useful stuff below the Metalab. But to get there she needs the cellar key. In the Whateverlab she finds the key cabinet which is full of different keys wit h different colors. She needs to know the color of the cellar key to take it.
 
 ------------------
 

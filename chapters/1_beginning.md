@@ -9,7 +9,7 @@
 #### Preconditions
 
 #### Conditions Initiated
-* Inside Metalab
+* Day 1
 
 #### Room
 Street
@@ -29,7 +29,7 @@ She looks around on the street and finds an empty pizza box. She takes the box t
 #### Items Provided
  
 #### Preconditions
-* Inside Metalab
+* Day 1
 
 #### Conditions Initiated
 
@@ -70,7 +70,7 @@ P: I've never seen you at the Metalab before. Is it your first time visiting?
 * Metalab key tag
 
 #### Preconditions
-* Inside Metalab
+* Day 1
 
 #### Conditions Initiated
 
@@ -92,7 +92,7 @@ She enters the Metalab and right at the entry to the main room there is a small 
 #### Items Provided
 
 #### Preconditions
-* Inside Metalab
+* Day 1
 
 #### Conditions Initiated
 * Knows about the rocket blue prints
@@ -122,4 +122,49 @@ N: Hi, my name is Nuri.
                       P: Good luck, Nuri the Austronaut.
                         N: Hmmm... Nuri the Austronaut... Nurinaut... I found my hackername! 
 ```
+--------------------
 
+### The Surf Station
+#### Items Required
+
+
+#### Items Provided
+
+#### Preconditions
+* Day 1
+
+#### Conditions Initiated
+* Read the wiki
+
+#### Room
+Main Room
+
+#### Goal
+Find items
+
+#### Story
+In the main room there is a PC free to use for everyone. It has been setup to only show the metalab wiki and the event calender. She learns about who is in charge for each of the tools.
+
+--------------------
+
+### The Lounge Musician
+
+#### Items Required
+
+#### Items Provided
+
+#### Preconditions
+* Day 1
+* Read the wiki
+
+#### Conditions Initiated
+* Befriended Amir
+
+#### Room
+Lounge
+
+#### Goal
+Help Amir to complete the lyrics to his song
+
+#### Story
+She walks into the louge and meets Amir which is sitting there and plays the guitar. She tells him that she read in the wiki that he is teaching people how to laser cut and that she wants to learn how to. Amir is willing to teach her, but first he wants to finish his song. Nuri helps him by completing each sentence of the lyrics with a word.

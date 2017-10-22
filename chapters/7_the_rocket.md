@@ -35,7 +35,6 @@ Nuri was able to manufacturem or find all parts required and can finally assembl
 #### Items Provided
 
 #### Preconditions
-* Inside backyard
 
 #### Conditions Initiated
 

@@ -1,14 +1,15 @@
 ## In this chapter nuri gets to know the possibilities of building things in the Metalab and gets people to teach her how to do it
 
-
 ### Learn how to lock pick
 #### Items Required
 
 #### Items Provided
 
 #### Preconditions
+* Day 2
 
 #### Conditions Initiated
+* Knows how to lock pick
 
 #### Room
 Main room
@@ -26,8 +27,12 @@ Learn how to lock pick
 #### Items Provided
 
 #### Preconditions
+* Day 1
+* Befriended Amir
+
 
 #### Conditions Initiated
+* Knows how to laser-cut
 
 #### Room
 Whateverlab
@@ -45,8 +50,10 @@ Learn how to laser-cut
 #### Items Provided
 
 #### Preconditions
+* Day 2
 
 #### Conditions Initiated
+* Knows how to cnc mill
 
 #### Room
 Heavy machinery
@@ -64,8 +71,10 @@ Learn how to use the cnc mill
 #### Items Provided
 
 #### Preconditions
+* Day 2
 
 #### Conditions Initiated
+* Knows how to weld
 
 #### Room
 Heavy machinery
@@ -83,8 +92,10 @@ Learn how to weld
 #### Items Provided
 
 #### Preconditions
+* Day 1
 
 #### Conditions Initiated
+* Knows how to solder
 
 #### Room
 Whateverlab
