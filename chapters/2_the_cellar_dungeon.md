@@ -8,6 +8,7 @@
 
 #### Preconditions
 * Knows the color of the cellar key
+* Day 1
 
 #### Conditions Initiated
 
@@ -30,6 +31,7 @@ Nuri heard that there is a cellar full of useful stuff below the Metalab. But to
 #### Items Provided
 
 #### Preconditions
+* Day 1
 
 #### Conditions Initiated
 * Lights restored in the cellar
@@ -46,28 +48,24 @@ Upstairs there is a fuse box and one of the fuses is missing. If she tries to pu
 
 ------------------
 
-
-### Convert used tires\nto compact fuel
+### Find a place to sleep\nin the cellar
 #### Items Required
-* Cellar key
-* Jacuzzi
-* Beefed up kitchen sink shredder
-* Heater
+* Blanket 
 
 #### Items Provided
-* Polybutadiene
 
 #### Preconditions
-* Lights restored in the cellar
+* Day 1
 
 #### Conditions Initiated
+* Day 2
 
 #### Room
-Cellar tire compartment
+Cellar
 
 #### Goal
-Shredder the tires using the beefed up shredder and melt it in the jacuzzi so you can use the rubber as fuel
+Find a place to sleep in the cellar since sleeping in the Metalab is forbidden and you are too tired to go home
 
 #### Story
+Find a place to sleep in the cellar since sleeping in the Metalab is forbidden and you are too tired to go home
 
-------------------

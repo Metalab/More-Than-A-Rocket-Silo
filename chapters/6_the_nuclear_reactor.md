@@ -74,3 +74,31 @@ Generate nitrous oxide to fuel the rocket
 
 #### Story
 Nuri created or found all the componets necessary to generate nitrous oxide. The nitrous oxide will fuel the rocket
+
+------------------
+
+### Convert used tires\nto compact fuel
+#### Items Required
+* Cellar key
+* Jacuzzi
+* Beefed up kitchen sink shredder
+* Heater
+
+#### Items Provided
+* Polybutadiene
+
+#### Preconditions
+* Lights restored in the cellar
+* Day 3
+
+#### Conditions Initiated
+
+#### Room
+Cellar tire compartment
+
+#### Goal
+Shredder the tires using the beefed up shredder and melt it in the jacuzzi so you can use the rubber as fuel
+
+#### Story
+
+------------------

@@ -1,6 +1,6 @@
 ## In this chapter nuri gets to know the possibilities of building things in the Metalab and gets people to teach her how to do it
 
-### Learn how to lock pick
+### Learn how to lock pick\nby attending the\nopen locks meeting
 #### Items Required
 
 #### Items Provided

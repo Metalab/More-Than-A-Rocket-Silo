@@ -168,3 +168,4 @@ Help Amir to complete the lyrics to his song
 
 #### Story
 She walks into the louge and meets Amir which is sitting there and plays the guitar. She tells him that she read in the wiki that he is teaching people how to laser cut and that she wants to learn how to. Amir is willing to teach her, but first he wants to finish his song. Nuri helps him by completing each sentence of the lyrics with a word.
+

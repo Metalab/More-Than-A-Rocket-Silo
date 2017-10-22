@@ -42,9 +42,33 @@ For the guidance system of the rocket Nuri needs an altimeter. She found out the
 Whateverlab
 
 #### Goal
-
+Manufacture a guidance system.
 
 #### Story
 Solder the parts for the guidance system.
+
+------------------
+
+### Pick the lock of the\nHackersurprise vending\nmachine
+#### Items Required
+* Pick set
+
+#### Items Provided
+* Accelerometer
+* Arduino
+
+#### Preconditions
+* Knows how to lock pick
+
+#### Conditions Initiated
+
+#### Room
+Main room
+
+#### Goal
+Get an accelerometer and an arduino from the hackersurprise
+
+#### Story
+Get an accelerometer and an arduino from the hackersurprise by picking the lock of the vending machine
 
 ------------------
