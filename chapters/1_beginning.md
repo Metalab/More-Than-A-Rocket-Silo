@@ -200,6 +200,7 @@ Create a pillow from PU foam and a trash bag so you can sleep in the cellar
 
 #### Items Provided
 * Trash bag
+* Tin foil
 
 #### Preconditions
 * Day 1 

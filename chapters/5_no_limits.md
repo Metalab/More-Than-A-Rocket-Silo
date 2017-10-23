@@ -1,8 +1,8 @@
 ## All Metalab members have been abducted by the galactic space travel agency. Nuri is the only one left because she was in the heavily shielded reactor room and scanners didn't pick her up. And since Metalab is a self-organized space she is in charge and can do whatever she wants.
 
-### Harvert a barometer\nsensor from a weather station
+### Harvest a barometer\nsensor from a weather station
 #### Items Required
-* Screw driver set
+* Weather station key
 
 #### Items Provided
 * Makeshift altimeter
@@ -49,16 +49,15 @@ Solder the parts for the guidance system.
 
 ------------------
 
-### Pick the lock of the\nHackersurprise vending\nmachine
+### Unlock the\nHackersurprise vending\nmachine to acquire\nan accelerometer and\nan Arduino
 #### Items Required
-* Pick set
+* Hackersurprise key
 
 #### Items Provided
 * Accelerometer
 * Arduino
 
 #### Preconditions
-* Knows how to lock pick
 
 #### Conditions Initiated
 

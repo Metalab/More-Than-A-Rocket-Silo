@@ -1,26 +1,5 @@
 ## In this chapter nuri gets to know the possibilities of building things in the Metalab and gets people to teach her how to do it
 
-### Learn how to lock pick\nby attending the\nopen locks meeting
-#### Items Required
-
-#### Items Provided
-
-#### Preconditions
-* Day 2
-
-#### Conditions Initiated
-* Knows how to lock pick
-
-#### Room
-Main room
-
-#### Goal
-Learn how to lock pick
-
-#### Story
-
-------------------
-
 ### Learn how to laser-cut
 #### Items Required
 
@@ -44,7 +23,7 @@ Learn how to laser-cut
 
 ------------------
 
-### Learn how to use the cnc mill
+### Learn how to use\nthe cnc mill
 #### Items Required
 
 #### Items Provided

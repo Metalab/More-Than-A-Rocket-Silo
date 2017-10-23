@@ -5,9 +5,10 @@
 
 #### Items Provided
 * Cellar Key
+* Hackersurprise key
+* Weather station key
 
 #### Preconditions
-* Knows the color of the cellar key
 * Day 1
 
 #### Conditions Initiated
@@ -19,14 +20,17 @@ Whateverlab
 Get the cellar key
 
 #### Story
-Nuri heard that there is a cellar full of useful stuff below the Metalab. But to get there she needs the cellar key. In the Whateverlab she finds the key cabinet which is full of different keys wit h different colors. She needs to know the color of the cellar key to take it.
+Nuri heard that there is a cellar full of useful stuff below the Metalab. But to get there she needs the cellar key. In the Whateverlab she finds the key cabinet. The cabinet has a dispenser with a code lock. the code lock has six digits and accepts only hexadecimal input. If she enters the right code she gets the corresponding key. Right below the cabinet is a hint:
+    The key for the cellar has the color of a caffienated drink. -> c0ffee
+    The key for the hackersurprise has the color of ten years -> decade
+    The key for the weather station has the color of a bad ass. -> bada55
 
 ------------------
 
 ### The cellar fuse
 #### Items Required
 * Tin foil
-* Cellar key
+* Cellar Key
 
 #### Items Provided
 
