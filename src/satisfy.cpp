@@ -19,6 +19,7 @@
 #include <boost/graph/dijkstra_shortest_paths.hpp>
 #include <boost/graph/visitors.hpp>
 #include <boost/graph/graphviz.hpp>
+#include <boost/filesystem.hpp>
 
 #include "IDs.hpp"
 #include "StoryBlock.hpp"
@@ -29,7 +30,7 @@ using std::endl;
 using std::ifstream;
 using std::string;
 namespace b = boost;
-
+namespace bfs = boost::filesystem;
 
 typedef b::adjacency_list<b::vecS, b::vecS, b::bidirectionalS, b::no_property, string> Graph;
 typedef typename b::graph_traits<Graph>::vertex_descriptor Vertex;
@@ -46,7 +47,7 @@ public:
       color="blue";
     }
 
-    out << "[label=\"" << itn_[v].title_ << "\" color=\""+ color + "\"]";
+    out << "[label=\"" << sb.title_ << "\\n(" << sb.room_ << ")" << "\" color=\""+ color + "\"]";
   }
 private:
   Graph& g_;
@@ -168,12 +169,13 @@ string make_bold(const string& s) {
   return "\033[1m" + s + "\033[0m";
 }
 
-void parse(std::istream& is, StoryBlockCollection& storyBlockCollection) {
+void parse(const string& filename, StoryBlockCollection& storyBlockCollection) {
   string line;
   ExpectedSection expected;
    size_t lineNum = 0;
    StoryBlock* currentSB = NULL;
-   while(std::getline(is, line)) {
+   std::ifstream ifs(filename);
+   while(std::getline(ifs, line)) {
      ++lineNum;
 
      boost::trim(line);
@@ -196,6 +198,8 @@ void parse(std::istream& is, StoryBlockCollection& storyBlockCollection) {
 		delete currentSB;
 	      }
 	      currentSB = new StoryBlock();
+	      bfs::path p(filename);
+	      currentSB->chapter_ = string() + p.filename().string().at(0);
 	      string s = line.substr(4);
 	      boost::trim(s);
 	      currentSB->title_ = s;
@@ -313,15 +317,16 @@ void parse(std::istream& is, StoryBlockCollection& storyBlockCollection) {
 	}
      }
    }
-   if(currentSB != NULL)
+   if(currentSB != NULL) {
      storyBlockCollection.add(*currentSB);
+   }
 }
 
 int main(int argc, char** argv) {
   StoryBlockCollection storyBlockCollection;
   for(int i = 1; i < argc; ++i) {
     std::ifstream ifs(argv[i]);
-    parse(ifs, storyBlockCollection);
+    parse(string(argv[i]), storyBlockCollection);
   }
   Graph g;
 

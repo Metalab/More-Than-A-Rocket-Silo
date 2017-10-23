@@ -29,6 +29,7 @@ public:
   string room_;
   string goal_;
   string story_;
+  string chapter_;
 
   void add(const EntityType& type, const string& value);
   std::vector<string> getAll(const EntityType& type);
