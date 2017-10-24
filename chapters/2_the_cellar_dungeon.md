@@ -4,7 +4,7 @@
 #### Items Required
 
 #### Items Provided
-* Cellar Key
+* Cellar key
 * Hackersurprise key
 * Weather station key
 
@@ -30,7 +30,7 @@ Nuri heard that there is a cellar full of useful stuff below the Metalab. But to
 ### The cellar fuse
 #### Items Required
 * Tin foil
-* Cellar Key
+* Cellar key
 
 #### Items Provided
 
@@ -54,12 +54,14 @@ Upstairs there is a fuse box and one of the fuses is missing. If she tries to pu
 
 ### Find a place to sleep\nin the cellar
 #### Items Required
-* Pillow 
+* Pillow
+* Cellar key
 
 #### Items Provided
 
 #### Preconditions
 * Day 1
+* Lights restored in the cellar
 
 #### Conditions Initiated
 * Day 2
@@ -72,4 +74,5 @@ Find a place to sleep in the cellar since sleeping in the Metalab is forbidden a
 
 #### Story
 Find a place to sleep in the cellar since sleeping in the Metalab is forbidden and you are too tired to go home
+
 

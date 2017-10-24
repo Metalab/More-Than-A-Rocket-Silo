@@ -85,3 +85,25 @@ Learn how to solder
 #### Story
 
 ------------------
+
+### Get a gyro from Anlumo
+#### Items Required
+
+#### Items Provided
+
+#### Preconditions
+* Day 2
+
+#### Conditions Initiated
+* Knows the alimeters are just air pressure sensors
+
+#### Room
+Main room
+
+#### Goal
+Get a gyro from Anlumo
+
+#### Story
+
+
+------------------
