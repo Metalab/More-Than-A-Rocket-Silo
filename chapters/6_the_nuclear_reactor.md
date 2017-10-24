@@ -20,6 +20,8 @@ Fix the reactor
 #### Story
 The primary cooling system of the reactor is broken. She finsd out that there is a missing piece of pipe. Fortunatly there is a pile of pipes lying around right there, but no pipe fits directly from the start pipe to the end pipe. She has to combine the available pipes so that they bridge the gap.
 
+![the pipe riddle](https://raw.githubusercontent.com/Metalab/More-Than-A-Rocket-Silo/master/chapters/img/fix_the_nuclear_reactor.jpg)
+
 ------------------
 
 ### Create a HD compressor\nfrom vacuum cleaners 
