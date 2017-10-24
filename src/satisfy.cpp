@@ -47,7 +47,7 @@ public:
       color="blue";
     }
 
-    out << "[label=\"" << sb.title_ << "\\n(" << sb.room_ << ")" << "\" color=\""+ color + "\"]";
+    out << "[label=\"" << sb.title_ << "\\n(" << sb.chapter_ << ")" << "\" color=\""+ color + "\"]";
   }
 private:
   Graph& g_;
