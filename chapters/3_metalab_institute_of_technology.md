@@ -90,6 +90,7 @@ Learn how to solder
 #### Items Required
 
 #### Items Provided
+* Gyro
 
 #### Preconditions
 * Day 2
@@ -104,6 +105,6 @@ Main room
 Get a gyro from Anlumo
 
 #### Story
-
+What does he want for the gyro?
 
 ------------------
