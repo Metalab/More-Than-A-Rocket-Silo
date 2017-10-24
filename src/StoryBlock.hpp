@@ -37,6 +37,10 @@ public:
   friend bool operator<(const StoryBlock& l, const StoryBlock& r) {
       return l.title_ < r.title_;
   }
+
+  string str() {
+    return "(" + chapter_ + ")\t" + title_ + " at " + room_;
+  }
 };
 
 

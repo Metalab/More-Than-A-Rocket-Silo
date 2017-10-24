@@ -388,7 +388,7 @@ int main(int argc, char** argv) {
     StoryBlock sb = StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*sit);
     size_t reqcnt = sb.itemsRequired_.size() + sb.preconditions_.size();
     if (in_degree (*sit, g) == reqcnt) {
-      cerr << sb.title_ << endl;
+      cerr << sb.str() << endl;
     }
   }
 
@@ -397,7 +397,7 @@ int main(int argc, char** argv) {
     StoryBlock sb = StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*sit);
     size_t reqcnt = sb.itemsRequired_.size() + sb.preconditions_.size();
     if (in_degree (*sit, g) != reqcnt) {
-      cerr << sb.title_ << endl;
+      cerr << sb.str() << endl;
     }
   }
 
@@ -408,7 +408,7 @@ int main(int argc, char** argv) {
 
   cerr << endl << make_color(make_bold("Orphans: "), RED) << endl;
   for(auto& orphane : copy.getSTN()) {
-    cerr << orphane.second.title_ << endl;
+    cerr << orphane.second.str() << endl;
   }
 
   std::multimap<int, string> timeToTitle;
@@ -416,7 +416,7 @@ int main(int argc, char** argv) {
 
   b::graph_traits<Graph>::vertex_iterator vit, iend;
   for (boost::tie(vit,iend) = vertices(g); vit != iend; ++vit)
-    timeToTitle.insert({time[*vit],StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*vit).title_});
+    timeToTitle.insert({time[*vit],StoryBlockIDs::STORY_BLOCK_IDS->getStoryBlockByID(*vit).str()});
 
 
   for(auto& p : timeToTitle)
