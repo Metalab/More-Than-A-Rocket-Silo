@@ -1,5 +1,27 @@
 ## In this chapter Nuri finds out about the nuclear reactor below the metalab. The entry is under the tables in the lounge. The reactor is malfunctioning and she needs to repair it because she needs a vast amount of energy to build her rocket.
 
+### Fix the nuclear reactor
+#### Items Required
+* Wrench
+
+#### Items Provided
+
+#### Preconditions
+
+#### Conditions Initiated
+* Reactor fixed
+
+#### Room
+Reactor room
+
+#### Goal
+Fix the reactor
+
+#### Story
+The primary cooling system of the reactor is broken. She finsd out that there is a missing piece of pipe. Fortunatly there is a pile of pipes lying around right there, but no pipe fits directly from the start pipe to the end pipe. She has to combine the available pipes so that they bridge the gap.
+
+------------------
+
 ### Create a HD compressor\nfrom vacuum cleaners 
 #### Items Required
 * Red vacuum

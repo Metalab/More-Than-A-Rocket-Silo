@@ -223,6 +223,7 @@ Pickup stuff
 
 #### Items Provided
 * PU foam
+* Wrench
 
 #### Preconditions
 * Day 1 
