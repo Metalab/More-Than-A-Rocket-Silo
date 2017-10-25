@@ -9,6 +9,7 @@
 
 #### Preconditions
 * Knows the alimeters are just air pressure sensors
+* Day 3
 
 #### Conditions Initiated
 
@@ -35,6 +36,7 @@ For the guidance system of the rocket Nuri needs an altimeter. She found out the
 
 #### Preconditions
 * KHT solder
+* Day 3
 
 #### Conditions Initiated
 
@@ -58,6 +60,7 @@ Solder the parts for the guidance system.
 * Arduino
 
 #### Preconditions
+* Day 3
 
 #### Conditions Initiated
 
