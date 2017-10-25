@@ -1,5 +1,27 @@
 ## In this chapter nuri gets to know the possibilities of building things in the Metalab and gets people to teach her how to do it
 
+### Talk to Mathias\nabout the thermal\ncamera
+#### Items Required
+
+#### Items Provided
+
+#### Preconditions
+* Day 2
+
+#### Conditions Initiated
+* KHT thermal camera
+
+#### Room
+Whateverlab
+
+#### Goal
+Learns how to use the thermal camera
+
+#### Story
+In the whateverlab Nuri meets Mathias who shows her his awesome thermal camera. He tells her in detail how to operate it but is not willing to lend it to her.
+
+------------------
+
 ### Learn how to laser-cut
 #### Items Required
 
@@ -11,7 +33,7 @@
 
 
 #### Conditions Initiated
-* Knows how to laser-cut
+* KHT laser-cut
 
 #### Room
 Whateverlab
@@ -32,7 +54,7 @@ Learn how to laser-cut
 * Day 2
 
 #### Conditions Initiated
-* Knows how to cnc mill
+* KHT cnc mill
 
 #### Room
 Heavy machinery
@@ -53,7 +75,7 @@ Learn how to use the cnc mill
 * Day 2
 
 #### Conditions Initiated
-* Knows how to weld
+* KHT weld
 
 #### Room
 Heavy machinery
@@ -74,7 +96,7 @@ Learn how to weld
 * Day 1
 
 #### Conditions Initiated
-* Knows how to solder
+* KHT solder
 
 #### Room
 Whateverlab

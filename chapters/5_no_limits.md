@@ -34,7 +34,7 @@ For the guidance system of the rocket Nuri needs an altimeter. She found out the
 * Guidance System
 
 #### Preconditions
-* Knows how to solder
+* KHT solder
 
 #### Conditions Initiated
 
@@ -71,3 +71,4 @@ Get an accelerometer and an arduino from the hackersurprise
 Get an accelerometer and an arduino from the hackersurprise by picking the lock of the vending machine
 
 ------------------
+

@@ -7,6 +7,7 @@
 * Cellar key
 * Hackersurprise key
 * Weather station key
+* Reactor key
 
 #### Preconditions
 * Day 1
@@ -24,6 +25,7 @@ Nuri heard that there is a cellar full of useful stuff below the Metalab. But to
     The key for the cellar has the color of a caffienated drink. -> c0ffee
     The key for the hackersurprise has the color of ten years -> decade
     The key for the weather station has the color of a bad ass. -> bada55
+    The key for the nuclear reactor room has the color of a fossile fuel -> d1e5e1
 
 ------------------
 

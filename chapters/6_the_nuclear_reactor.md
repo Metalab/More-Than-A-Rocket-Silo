@@ -7,6 +7,7 @@
 #### Items Provided
 
 #### Preconditions
+* Day 3
 
 #### Conditions Initiated
 * Reactor fixed
@@ -36,6 +37,7 @@ The primary cooling system of the reactor is broken. She finsd out that there is
 * Heavy duty compressor
 
 #### Preconditions
+* Day 3 
 
 #### Conditions Initiated
 
@@ -61,6 +63,7 @@ To purify oxygen Nuri needs a heavy duty compressor. She collecs all four vacuum
 #### Preconditions
 * Reactor fixed
 * Lights restored in the cellar
+* Day 3
 
 #### Conditions Initiated
 * Installed heavy duty compressor 
@@ -87,6 +90,7 @@ To purify oxygen Nuri built a heavy duty compressor from vacuum cleaners. Now sh
 
 #### Preconditions
 * Installed heavy duty compressor 
+* Day 3 
 
 #### Conditions Initiated
 

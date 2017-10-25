@@ -18,7 +18,7 @@ Street
 Gain entry to the metalab
 
 #### Story
-<!-- Looking for people that can teach her how to build a rocket, Nuri finds out about the Metalab - the finest Hackerspace in Vienna. She decides to visit. On the street, right in front of the Metalab she can see through the windows that people are present. She goes to the door and she tries to ring the bell but nothing happens. No matter how often she tries the bell doesn't sound. So she tries to shout through the door: Hi?... I'd like to come in... please open... But no reaction. So she walks up to the window and knocks. People sitting inside briefly turn their heads just to immediately turn it back and stare at their computer screens.  -->
+Looking for people that can teach her how to build a rocket, Nuri finds out about the Metalab - the finest Hackerspace in Vienna. She decides to visit. On the street, right in front of the Metalab she can see through the windows that people are present. She goes to the door and she tries to ring the bell but nothing happens. No matter how often she tries the bell doesn't sound. So she tries to shout through the door: Hi?... I'd like to come in... please open... But no reaction. So she walks up to the window and knocks. People sitting inside briefly turn their heads just to immediately turn it back and stare at their computer screens.
 She looks around on the street and finds an empty pizza box. She takes the box to one of the windows, knocks, and shows the box. faster than the speed of light one of the guys sitting inside runs to the door and opens it.
 
 --------------------
@@ -90,12 +90,12 @@ She enters the Metalab and right at the entry to the main room there is a small 
 #### Items Required
 
 #### Items Provided
+* Rocket blue prints
 
 #### Preconditions
 * Day 1
 
 #### Conditions Initiated
-* Knows about the rocket blue prints
 
 #### Room
 Main Room
@@ -117,11 +117,18 @@ N: Hi, my name is Nuri.
             N: Ich want to build a space rocket. I've heard at the Metalab you can build anything!
               P: Lol. You're not the first wanting to build a space rocket.
                 N: Really? Someone already did that?
-                  P: Not really. But he planned it. Zeljko created very detailed blue prints. Somewhere they still gotta lie around.
-                    N: I have to find them! Thank you!
-                      P: Good luck, Nuri the Austronaut.
-                        N: Hmmm... Nuri the Austronaut... Nurinaut... I found my hackername! 
+                  P: Not really. But he planned it. Zeljko created very detailed blue prints.
+                    N: Whera are they?
+                        P: (Standing up with big eyes): You will have to go to a dark forbidden place where truth and lies, imagination and reality and good and evil meet. You will have to fight demons and beasts. You will have to face your greatest fears. And in the end you w....
+                            N: ... Wait... right behind you is big sign saying rocket blue prints. Are those the rocket blue prints you were talking about?
+                                P: Ermm... yes.
+                                    N: Why didn't you just tell me?
+                                        P: Because just telling you would have been boring.
+                                            N: Well.. thank you, i guess
+                                                P: Good luck, Nuri the Austronaut.
+                                                    N: Hmmm... Nuri the Austronaut... Nurinaut... I found my hackername! 
 ```
+
 --------------------
 
 ### The Surf Station
