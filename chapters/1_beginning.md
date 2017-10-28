@@ -175,30 +175,6 @@ Help Amir to complete the lyrics to his song
 #### Story
 She walks into the louge and meets Amir which is sitting there and plays the guitar. She tells him that she read in the wiki that he is teaching people how to laser cut and that she wants to learn how to. Amir is willing to teach her, but first he wants to finish his song. Nuri helps him by completing each sentence of the lyrics with a word.
 
---------------------
-
-### Create a pillow\nfrom PU foam and\n a trash bag
-#### Items Required
-* PU foam
-* Trash bag
-
-#### Items Provided
-* Pillow
-
-#### Preconditions
-* Day 1
-* Sleepy
-
-#### Conditions Initiated
-
-#### Room
-Heavy Machinery
-
-#### Goal
-Create a pillow so you can sleep in the cellar
-
-#### Story
-Create a pillow from PU foam and a trash bag so you can sleep in the cellar
 
 --------------------
 
@@ -208,6 +184,7 @@ Create a pillow from PU foam and a trash bag so you can sleep in the cellar
 #### Items Provided
 * Trash bag
 * Tin foil
+* Empty beer bottle
 
 #### Preconditions
 * Day 1 
@@ -222,6 +199,31 @@ Pickup stuff
 
 #### Story
 Pickup stuff
+
+--------------------
+
+--------------------
+
+### Fill beer bottle with water
+#### Items Required
+* Empty beer bottle
+
+#### Items Provided
+* Beer bottle filled with water
+
+#### Preconditions
+* Day 1 
+
+#### Conditions Initiated
+
+#### Room
+Kitchen
+
+#### Goal
+Fill the beer bottle with water
+
+#### Story
+Fill the beer bottle with water
 
 --------------------
 
@@ -245,3 +247,27 @@ Pickup stuff
 
 #### Story
 Pickup stuff
+
+--------------------
+
+### Pick up stuff in the\nWhateverlab
+#### Items Required
+
+#### Items Provided
+* Scissors
+
+#### Preconditions
+* Day 1 
+
+#### Conditions Initiated
+
+#### Room
+Whateverlab
+
+#### Goal
+Pickup stuff
+
+#### Story
+Pickup stuff
+
+

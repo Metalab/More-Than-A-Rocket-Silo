@@ -24,7 +24,7 @@ Get the cellar key
 Nuri heard that there is a cellar full of useful stuff below the Metalab. But to get there she needs the cellar key. In the Whateverlab she finds the key cabinet. The cabinet has a dispenser with a code lock. the code lock has six digits and accepts only hexadecimal input. If she enters the right code she gets the corresponding key. Right below the cabinet is a hint:
     The key for the cellar has the color of a caffienated drink. -> c0ffee
     The key for the hackersurprise has the color of ten years -> decade
-    The key for the weather station has the color of a bad ass. -> bada55
+    The key for the weather station has the color of bad ass. -> bada55
     The key for the nuclear reactor room has the color of a fossile fuel -> d1e5e1
 
 ------------------
@@ -52,6 +52,55 @@ Restore power to the cellar so that there is light
 She found the key to the cellar and she opens the door. But when she tries to flip the light switch nothing happens. She can enter the first room ot the cellar but the rest is to dark to see anything, so she can't proceed.
 Upstairs there is a fuse box and one of the fuses is missing. If she tries to put the tin foil in the fuse socket right away, she gets an electrical shock. So she disables the residual-current device and then puts the tin foil in place.
 
+--------------------
+
+### Sleepy1
+#### Items Required
+
+#### Items Provided
+
+#### Preconditions
+* Day 1
+* KHT laser-cut
+* KHT solder
+
+#### Conditions Initiated
+* Sleepy1
+
+#### Room
+All
+
+#### Goal
+She is sleepy after you she learned so much
+
+#### Story
+She is sleepy after you she learned so much
+
+--------------------
+
+### Create a pillow\nfrom PU foam and\n a trash bag
+#### Items Required
+* PU foam
+* Trash bag
+
+#### Items Provided
+* Pillow
+
+#### Preconditions
+* Day 1
+* Sleepy1
+
+#### Conditions Initiated
+
+#### Room
+Heavy Machinery
+
+#### Goal
+Create a pillow so you can sleep in the cellar
+
+#### Story
+Create a pillow from PU foam and a trash bag so you can sleep in the cellar
+
 ------------------
 
 ### Find a place to sleep\nin the cellar
@@ -76,5 +125,4 @@ Find a place to sleep in the cellar since sleeping in the Metalab is forbidden a
 
 #### Story
 Find a place to sleep in the cellar since sleeping in the Metalab is forbidden and you are too tired to go home
-
 

@@ -22,6 +22,76 @@ In the whateverlab Nuri meets Mathias who shows her his awesome thermal camera. 
 
 ------------------
 
+### The Beer Challenge
+#### Items Required
+* Beer bottle filled with water
+
+#### Items Provided
+
+#### Preconditions
+* Day 1
+
+#### Conditions Initiated
+* Nico at the toilette
+
+#### Room
+Lounge
+
+#### Goal
+Get Nico to drink a lot of beer so that he'll have to go to the toilette.
+
+#### Story
+Nico boasts that no one can drink a beer faster than he can. Nuri challenges him just to get him to drink the beer. While Nicos bottle is filled with water nicos bottle is filled with beer. Right after he finishes the beer, he has to pee and goes to the toilette. 
+
+-------------------
+
+### Just a strand of hair
+#### Items Required
+* Scissors
+
+#### Items Provided
+* Nicos hair
+
+#### Preconditions
+* Day 1
+* Nico at the toilette
+
+#### Conditions Initiated
+
+#### Room
+Lounge
+
+#### Goal
+While Nico is on the toilette she cuts of a strand of his hair
+
+#### Story
+Nicos is at the toilette peeing because he drank a lot of beer. Nuri climbs through the kitchen window into the courtyard where there is also the toilette window. through the toilette window she can see Nicos  enourmous hair and cuts of a strand with scissors
+
+-------------------
+
+### Fix the lasercutter ventilation
+#### Items Required
+* Nicos hair
+
+#### Items Provided
+
+#### Preconditions
+* Day 1
+
+#### Conditions Initiated
+* Lasercutter fixed
+
+#### Room
+Whateverlab
+
+#### Goal
+Fix the lasercutter ventilation
+
+#### Story
+The ventilation of the lasercutter is broken. Without it, it can't be safely operated. Nuri got a hold of a strand of Nicos hair and uses it to fix the ventilation
+
+------------------
+
 ### Learn how to laser-cut
 #### Items Required
 
@@ -30,7 +100,7 @@ In the whateverlab Nuri meets Mathias who shows her his awesome thermal camera. 
 #### Preconditions
 * Day 1
 * Befriended Amir
-
+* Lasercutter fixed
 
 #### Conditions Initiated
 * KHT laser-cut
